@@ -16,6 +16,20 @@ export default function Profile() {
 
             <div className="profile-image">
                 <Image src="/images/profile.jpeg" alt="Profile" width={100} height={140}/>
+                <div className="profile-detail">
+                    <dl>
+                        <dt>이름 :</dt>
+                        <dd>이재덕</dd>
+                    </dl>
+                    <dl>
+                        <dt>E-mail :</dt>
+                        <dd>jaedurk33@gmail.com</dd>
+                    </dl>
+                    <dl>
+                        <dt>이름 :</dt>
+                        <dd>이재덕</dd>
+                    </dl>
+                </div>
             </div>
 
         </section>
