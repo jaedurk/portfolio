@@ -10,19 +10,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko">
       <body suppressHydrationWarning={true}>
-      <header>
-        <Link href="/">Portfolio</Link>
-        <nav>
-          <ul>
-            <li><Link href="/profile">Profile</Link></li>
-            <li><Link href="/publish">Publish</Link></li>
-            <li><Link href="/develop">Develop</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </header>
-      {children}
-      <footer>Made by JD</footer>
+      <div className="wrap">
+          <header>
+            <h1><Link href="/">Portfolio</Link></h1>
+            <nav>
+              <ul>
+                <li><Link href="/profile">Profile</Link></li>
+                <li><Link href="/publish">Publish</Link></li>
+                <li><Link href="/develop">Develop</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
+              </ul>
+            </nav>
+          </header>
+          {children}
+          <footer>Made by JD</footer>
+      </div>
       </body>
     </html>
   )
