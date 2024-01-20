@@ -23,7 +23,10 @@ export default function RootLayout({ children }) {
             </nav>
           </header>
           {children}
-          <footer>Made by JD</footer>
+          <footer>
+              <p className="skills">해당 포트폴리오 사이트는 next.js로 구성되어 있습니다.</p>
+              <p className="made">Made by JD</p>
+          </footer>
       </div>
       </body>
     </html>

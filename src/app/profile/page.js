@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Profile() {
     return (
         <section className="profile">
-            <Image src="/images/profile.jpeg" alt="Profile" width={100} height={140} className="profile-image"/>
+            <Image src="/images/profile-image.jpg" alt="Profile" width={206} height={291} className="profile-image"/>
             <div className="profile-detail">
                 <dl>
                     <dt>이름</dt>
