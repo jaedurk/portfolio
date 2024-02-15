@@ -2,9 +2,45 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px 0;
-  display: flex;
 
+  ul {
+    > li {
+      margin-top: 20px;
+      background-color: #eee;
+      border-radius: 10px;
+      padding: 20px 20px;
+      color: #101010;
+      display: flex;
 
+      &:first-child {
+        margin-top: 0;
+      }
+
+      > p {
+        margin-right: 20px;
+      }
+
+      > div {
+        padding-top: 30px;
+
+        p {
+          margin-top: 20px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+
+      a {
+        color: #258ddb;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
 
 

@@ -116,7 +116,7 @@ legend {
 
 body {
     position: relative;
-    min-width: 320px;
+    min-width: 1000px;
     margin: 0 auto;
     font-family: 'Pretendard', 'Roboto', 'Noto Sans KR', Apple SD Gothic Neo, dotum, '돋움', sans-serif;
     word-break: normal;
@@ -382,16 +382,14 @@ header nav ul li a {
     font-size: 20px;
 }
 
-footer{
+footer {
     padding: 45px 0;
     background-color: #5f5f5f;
     text-align: center;
     font-size: 16px;
-    .skills {
+}
 
-    }
-    .made {
-        font-size: 20px;
-        font-weight: 600;
-    }
+footer .made {
+    font-size: 20px;
+    font-weight: 600;
 }

@@ -1,18 +1,27 @@
 import Link from "next/link";
 import '/public/styles/publish.scss';
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
+import Image from "next/image";
 
-export const getServerSideProps = (async () => {
+export default async function Publish() {
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL + 'publish', {cache: 'no-store'});
+    const publishList = await response.json();
 
-})
-
-export default function Publish() {
     return (
         <section className="publish">
             <ul>
-                <li>
-                    <p><Link href="/">대전시통합도서관 작은도서관 도서관리시스템 구축사업</Link></p>
-                    <p>메인 및 서브 데코레이터 퍼블리싱</p>
-                </li>
+                {publishList.map((publishItem) => {
+                    return <li key={publishItem.id}>
+                        <p><Image src={publishItem.imageUrl ? '/images/publish/' + publishItem.imageUrl : '/images/no-img.jpg'} alt={publishItem.name} width={440}
+                                  height={295}/></p>
+                        <div>
+                            <p>프로젝트명 : {publishItem.name}</p>
+                            <p>URL : {publishItem.url ?
+                                <Link href={publishItem.url}>{publishItem.url}</Link> : 'URL이 변경되었거나 존재하지 않습니다'}</p>
+                            <p>직무 : {publishItem.detail}</p>
+                        </div>
+                    </li>
+                })}
             </ul>
         </section>
     )
