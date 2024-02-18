@@ -1,4 +1,3 @@
-
 import '/public/styles/develop.scss';
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
@@ -14,11 +13,10 @@ export default async function Develop() {
                         <div>
                             <p>프로젝트명 : {developItem.name}</p>
                             <p>기간 : {developItem.period}</p>
-                            <p>Front-end :
-                                {developList.skills.map((skillList) => {
-                                    return skillList
-                                })}
-                            </p>
+                            <p className="skills">Skills : {developItem.skills.map((skillList, skillIndex) =>  {
+                                return <span key={skillIndex}>{skillList}</span>
+                            })}</p>
+                            <p></p>
                         </div>
                     </li>
                 })}

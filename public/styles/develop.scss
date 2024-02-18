@@ -21,13 +21,31 @@
       }
 
       > div {
-        padding-top: 30px;
 
         p {
           margin-top: 20px;
 
           &:first-child {
             margin-top: 0;
+          }
+
+          &.skills {
+            span {
+              margin-right: 10px;
+
+              &:after {
+                display: inline;
+                content: ",";
+              }
+
+              &:last-child {
+                margin-right: 0;
+
+                &:after {
+                  display: none;
+                }
+              }
+            }
           }
         }
       }
@@ -42,8 +60,4 @@
     }
   }
 }
-
-
-
-
 

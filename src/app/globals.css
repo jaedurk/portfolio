@@ -350,11 +350,11 @@ header h1 {
 }
 
 header h1 a {
-    color: #6a20ff
+    color: #25b9e9;
 }
 
 header nav {
-    background-color: #ff2575;
+    background-color: #e9bd25;
     margin-top: 40px;
     padding: 10px 0
 }
