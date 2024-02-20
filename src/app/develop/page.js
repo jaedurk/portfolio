@@ -1,5 +1,4 @@
 import '/public/styles/develop.scss';
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export default async function Develop() {
     const response = await fetch(process.env.NEXT_PUBLIC_API_URL + 'front', {cache: 'no-store'});
@@ -13,10 +12,12 @@ export default async function Develop() {
                         <div>
                             <p>프로젝트명 : {developItem.name}</p>
                             <p>기간 : {developItem.period}</p>
-                            <p className="skills">Skills : {developItem.skills.map((skillList, skillIndex) =>  {
+                            <p className="skills">사용기술 : {developItem.skills.map((skillList, skillIndex) => {
                                 return <span key={skillIndex}>{skillList}</span>
                             })}</p>
-                            <p></p>
+                            <ul>상세내용 {developItem.detail.map((detailList, detailIndex) => {
+                                return <li key={detailIndex}>{detailList}</li>
+                            })}</ul>
                         </div>
                     </li>
                 })}

@@ -368,11 +368,11 @@ header nav ul {
 
 header nav ul li {
     flex: 1;
-    border-left: 1px solid #ff89b4
+    border-left: 1px solid #ded2a7
 }
 
 header nav ul li:last-child {
-    border-right: 1px solid #ff89b4
+    border-right: 1px solid #ded2a7
 }
 
 header nav ul li a {

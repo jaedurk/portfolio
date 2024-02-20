@@ -12,7 +12,9 @@ export default async function Publish() {
             <ul>
                 {publishList.map((publishItem) => {
                     return <li key={publishItem.id}>
-                        <p><Image src={publishItem.imageUrl ? '/images/publish/' + publishItem.imageUrl : '/images/no-img.jpg'} alt={publishItem.name} width={440} height={295}/></p>
+                        <p><Image className={publishItem.mobile && 'mobile'}
+                                  src={publishItem.imageUrl ? '/images/publish/' + publishItem.imageUrl : '/images/no-img.jpg'}
+                                  alt={publishItem.name} width={440} height={295}/></p>
                         <div>
                             <p>프로젝트명 : {publishItem.name}</p>
                             <p>URL : {publishItem.url ?

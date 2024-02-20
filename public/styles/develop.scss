@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 50px 0;
 
-  ul {
+  > ul {
     > li {
       margin-top: 20px;
       background-color: #eee;
@@ -45,6 +45,18 @@
                   display: none;
                 }
               }
+            }
+          }
+        }
+
+        > ul {
+          margin-top: 20px;
+          > li {
+            margin-top:5px;
+            &:before {
+              content: "-";
+              display: inline-block;
+              margin-right: 5px;
             }
           }
         }

@@ -335,6 +335,14 @@
       "detail": "이용안내 하드코딩 페이지 퍼블리싱",
       "url": "http://honors.hongik.ac.kr/",
       "imageUrl": "hongik.png"
+    },
+    {
+      "id": 49,
+      "name": "이벤트 페이지 내 댓글 기능 추가",
+      "detail": "댓글입력창 및 댓글목록 퍼블리싱",
+      "url": "",
+      "imageUrl": "publish01.png",
+      "mobile": true
     }
   ],
   "front": [
@@ -347,7 +355,7 @@
         "SCSS"
       ],
       "detail": [
-        {"장바구니 페이지 UI 수정"
+        "장바구니 페이지 UI 수정"
       ],
       "image": "/images/image1.jpg"
     },
@@ -359,10 +367,11 @@
         "HTML5",
         "Vanilla JS",
         "SCSS",
-        "Socket.IO, Axios"
+        "Socket.IO",
+        "Axios"
       ],
       "detail": [
-        "실시간 채팅 연동"
+        "실시간 채팅 연동",
         "실시간 방송상태(대기 - 진행중 - 종료)값에 따른 화면 분기처리",
         "상황별 에러 화면 처리",
         "방송 진입 시 방송 및 상품 정보 처리",
@@ -448,12 +457,8 @@
         "Ajax"
       ],
       "detail": [
-        {
-          "description": "출금 신청 페이지(계좌입력 및 API 연동)"
-        },
-        {
-          "description": "출금 완료 페이지 개발)"
-        }
+        "출금 신청 페이지(계좌입력 및 API 연동)",
+        "출금 완료 페이지 개발"
       ],
       "image": "/images/image7.jpg"
     },
@@ -467,9 +472,7 @@
         "SCSS"
       ],
       "detail": [
-        {
-          "description": "슬라이드배너 터치 스와이프 및 인디케이터 개발"
-        }
+        "슬라이드배너 터치 스와이프 및 인디케이터 개발"
       ],
       "image": "/images/image8.jpg"
     },
