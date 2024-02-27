@@ -356,7 +356,6 @@ header h1 a {
 header nav {
     background-color: #e9bd25;
     margin-top: 40px;
-    padding: 10px 0
 }
 
 header nav ul {
@@ -371,6 +370,10 @@ header nav ul li {
     border-left: 1px solid #ded2a7
 }
 
+header nav ul li.on {
+    background-color: orange;
+}
+
 header nav ul li:last-child {
     border-right: 1px solid #ded2a7
 }
@@ -380,6 +383,8 @@ header nav ul li a {
     text-align: center;
     color: #fff;
     font-size: 20px;
+    padding: 10px 0;
+    background: none;
 }
 
 footer {
@@ -390,6 +395,7 @@ footer {
 }
 
 footer .made {
+    margin-top: 15px;
     font-size: 20px;
     font-weight: 600;
 }
