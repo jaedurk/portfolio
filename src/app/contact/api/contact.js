@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import {NextApiRequest, NextApiResponse} from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'POST') {
@@ -12,15 +12,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.SMPT_EMAIL,
-            pass: process.env.SMPT_PASS,
+            user: 'jaedurk33@gmail.com',
+            pass: 'qemi yinl gyts vjwo',
         },
     });
 
     // 메일 전송 설정
     const mailOptions = {
-        from: process.env.SMPT_EMAIL,
-        to: process.env.SMPT_EMAIL,
+        from: 'jaedurk33@gmail.com',
+        to: 'jaedurk33@gmail.com',
         subject: 'New Inquiry',
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };

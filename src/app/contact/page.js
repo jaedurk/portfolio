@@ -1,9 +1,8 @@
 'use client';
 
-import '/public/styles/contact.scss';
 import { useState } from 'react';
 
-export default function Contact() {
+export default function Home() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -40,7 +39,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="contact">
+        <div>
             <h1>Contact Us</h1>
             <form onSubmit={handleSubmit}>
                 <label>
