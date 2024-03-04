@@ -1,36 +1,34 @@
-import nodemailer from 'nodemailer';
-import { NextApiRequest, NextApiResponse } from 'next';
+import nodemailer from "nodemailer";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    if (req.method !== 'POST') {
-        return res.status(405).end(); // Method Not Allowed
-    }
+export type EmailData = {
+    from: string;
+    subject: string;
+    message: string;
+};
 
-    const { name, email, message } = req.body;
+const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+        user: process.env.AUTH_USER,
+        pass: process.env.AUTH_PASS,
+    },
+});
 
-    // Nodemailer 설정
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'jaedurk33@gmail.com',
-            pass: 'qemi yinl gyts vjwo',
-        },
-    });
-
-    // 메일 전송 설정
-    const mailOptions = {
-        from: 'jaedurk33@gmail.com',
-        to: 'jaedurk33@gmail.com',
-        subject: 'New Inquiry',
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+export async function sendEmail({subject, from, message}: EmailData) {
+    const mailData = {
+        to: process.env.AUTH_USER,
+        subject: `${subject}`,
+        from,
+        html: `
+    <h1>${subject}</h1>
+    <div>${message}</div>
+    `,
     };
 
-    try {
-        // 메일 전송
-        await transporter.sendMail(mailOptions);
-        return res.status(200).json({ success: true });
-    } catch (error) {
-        console.error(error);
-        return res.status(500).json({ success: false, error: 'Internal Server Error' });
-    }
+    const info = await transporter.sendMail(mailData);
+    console.log("Message sent: %s", info.messageId);
+
+    return info;
 }
