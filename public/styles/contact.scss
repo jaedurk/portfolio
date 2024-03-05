@@ -1,6 +1,16 @@
 .contact {
   width: 1000px;
+  min-height:600px;
   margin: 0 auto;
-  background: blue;
+  display: flex;
+  align-items: center;
+  h2 {
+    display: block;
+  }
+  form {
+    display: block;
+    margin:0 auto;
+
+  }
 }
 
