@@ -44,6 +44,16 @@ export default function Profile() {
                         </ul>
                     </dd>
                 </dl>
+                <dl>
+                    <dt>Education :</dt>
+                    <dd>
+                        <ul>
+                            <li>교육기관 : 티아이에스정보기술교육센터학원<br/>교육내용 : Vue.js와 React.js를 활용한 프론트엔드 웹개발 실무 과정<br/>기간 - 2020.05.16 ~ 2020.06.20</li>
+                            <li>교육기관 : 멀티캠퍼스<br/>교육내용 : HTML5 개요 및 모바일 디바이스와의 관계(반응형웹, jQuery Mobile)<br/>기간 - 2015.03.02 ~ 2015.03.06</li>
+                            <li>교육기관 : 국제인재능력개발원 <br/> 교육내용 : 퍼블리싱(웹접근성&웹표준, - HTML5 & CSS3, Javascript, jQuery, CrossBrowsing, 포토샵 CS5)<br/>기간 - 2015.03.02 ~ 2015.03.06</li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </section>
     )
