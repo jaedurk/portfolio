@@ -24,7 +24,7 @@ export async function POST(request) {
             from: email,
             to: AUTH_USER,
             subject: subject,
-            text: message + '\n\n' + email
+            text: message + '\n\n' + '보낸사람 : ' + email
         });
 
         return NextResponse.json({message: "Success: email was sent"});
