@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx json-server -p 8000 db.json && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,12 +12,12 @@
     "express": "^4.18.3",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18",
-    "json-server": "^1.0.0-alpha.23"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "json-server": "^1.0.0-alpha.23",
     "nodemailer": "^6.9.10",
     "sass": "^1.70.0"
   }
