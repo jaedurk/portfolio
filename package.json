@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server": "npx json-server -p 8000 --watch db.json",
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npx json-server -p 8000 --watch db.json && next dev",
+    "build": "npx json-server -p 8000 --watch db.json &&next build",
     "start": "next start",
     "lint": "next lint"
   },
