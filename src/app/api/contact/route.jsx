@@ -20,7 +20,7 @@ export async function POST(request) {
     });
 
     try {
-        const mail = await transporter.sendMail({
+        await transporter.sendMail({
             from: email,
             to: AUTH_USER,
             subject: subject,
