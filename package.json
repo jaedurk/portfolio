@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "server": "npx json-server -p 8000 --watch db.json",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "server": "npx json-server -p 8000 --watch db.json"
+    "lint": "next lint"
   },
   "dependencies": {
     "express": "^4.18.3",
