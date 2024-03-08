@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx json-server -p 8000 db.json && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
