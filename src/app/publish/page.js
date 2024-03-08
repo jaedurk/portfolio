@@ -1,10 +1,9 @@
 import Link from "next/link";
 import '/public/styles/publish.scss';
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 import Image from "next/image";
 
 export default async function Publish() {
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL + 'publish', {cache: 'no-store'});
+    const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/publish', {cache: 'no-store'});
     const publishList = await response.json();
 
     return (

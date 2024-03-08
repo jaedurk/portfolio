@@ -1,7 +1,7 @@
 import '/public/styles/develop.scss';
 
 export default async function Develop() {
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL + 'front', {cache: 'no-store'});
+    const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/develop', {cache: 'no-store'});
     const developList = await response.json();
 
     return (
