@@ -31,7 +31,7 @@ export default function Profile() {
                             </li>
                             <li>Front-end : HTML, CSS, Vanilla JS, jQuery, React, Next.js, Socket.IO</li>
                             <li>Version Control : svn, git</li>
-                            <li>Communication : Jira, Confluence, Zeplin</li>
+                            <li>Communication : Jira, Confluence, Zeplin, Figma</li>
                         </ul>
                     </dd>
                 </dl>
