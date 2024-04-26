@@ -63,7 +63,8 @@ const devlopList = [
             "Axios"
         ],
         "detail": [
-            "APP 화면 및 기능 동기화(컴포넌트 분기 처리 및 기능 추가/수정)"
+            "실시간 입찰현황 노출",
+            "낙찰 시 레어어 팝업 노출 이벤트 처리"
         ],
         "image": "/images/image4.jpg"
     },
