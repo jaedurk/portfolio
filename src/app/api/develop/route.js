@@ -64,6 +64,7 @@ const devlopList = [
         ],
         "detail": [
             "실시간 입찰현황 노출",
+            "경매 상품 노출 처리",
             "낙찰 시 레어어 팝업 노출 이벤트 처리"
         ],
         "image": "/images/image4.jpg"
