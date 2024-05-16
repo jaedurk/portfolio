@@ -27,7 +27,7 @@ export default function Profile() {
                     <dd>
                         <ul>
                             <li>Publish : HTML, CSS, SASS(SCSS), Vanilla JS, jQuery, Bootstrap, Web Accessibility, Cross
-                                Web Browsing
+                                Web Browsing, Responsive Web
                             </li>
                             <li>Front-end : HTML, CSS, Vanilla JS, jQuery, React, Next.js, Socket.IO</li>
                             <li>Version Control : svn, git</li>
