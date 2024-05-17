@@ -3,7 +3,7 @@ import {NextResponse} from "next/server";
 const devlopList = [
     {
         "id": 1,
-        "name": "장바구니 개편",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 장바구니 개편",
         "period": "2021.08 ~ 2021.10",
         "skills": [
             "HTML5",
@@ -16,7 +16,7 @@ const devlopList = [
     },
     {
         "id": 2,
-        "name": "라이브커머스",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 라이브커머스",
         "period": "2021.08 ~ 2021.10",
         "skills": [
             "HTML5",
@@ -38,7 +38,7 @@ const devlopList = [
     },
     {
         "id": 3,
-        "name": "3종 모바일웹 고도화",
+        "name": "3종 모바일웹(공구마켓, 심쿵할인, 할인중독) 고도화",
         "period": "2021.10 ~ 2022.04",
         "skills": [
             "React",
@@ -53,7 +53,7 @@ const devlopList = [
     },
     {
         "id": 4,
-        "name": "경매라이브",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 경매라이브",
         "period": "2022.05 ~ 2022.08",
         "skills": [
             "HTML5",
@@ -71,7 +71,7 @@ const devlopList = [
     },
     {
         "id": 5,
-        "name": "장바구니 쿠폰 적용 및 UI개선",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 장바구니 쿠폰 적용 및 UI개선",
         "period": "2022.10",
         "skills": [
             "HTML5",
@@ -87,7 +87,7 @@ const devlopList = [
     },
     {
         "id": 6,
-        "name": "포인트 지급",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 포인트 지급",
         "period": "2023.03 ~ 2023.04",
         "skills": [
             "HTML5",
@@ -105,7 +105,7 @@ const devlopList = [
     },
     {
         "id": 7,
-        "name": "용돈봉투",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 용돈봉투",
         "period": "2023.05 ~ 2023.06",
         "skills": [
             "HTML5",
@@ -121,7 +121,7 @@ const devlopList = [
     },
     {
         "id": 8,
-        "name": "온보딩",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 온보딩",
         "period": "2023.07",
         "skills": [
             "HTML5",
@@ -135,7 +135,7 @@ const devlopList = [
     },
     {
         "id": 9,
-        "name": "OKcashbag 연동",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) OKcashbag 연동",
         "period": "2023.08",
         "skills": [
             "HTML5",
@@ -151,7 +151,7 @@ const devlopList = [
     },
     {
         "id": 10,
-        "name": "Youtube 연동",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) Youtube 연동",
         "period": "2023.09 ~ 2023.10",
         "skills": [
             "HTML5",
@@ -172,7 +172,7 @@ const devlopList = [
     },
     {
         "id": 11,
-        "name": "클레임",
+        "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 클레임",
         "period": "2023.10 ~ 2023.11",
         "skills": [
             "HTML5",
