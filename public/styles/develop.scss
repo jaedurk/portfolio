@@ -19,6 +19,11 @@
 
       > p {
         margin-right: 20px;
+
+        .no-image {
+          width: 360px !important;
+          height: auto;
+        }
       }
 
       > div {

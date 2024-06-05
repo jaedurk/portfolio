@@ -12,7 +12,7 @@ const devlopList = [
         "detail": [
             "장바구니 페이지 UI 수정"
         ],
-        "image": "/images/image1.jpg"
+        "imageUrl": ""
     },
     {
         "id": 2,
@@ -34,7 +34,7 @@ const devlopList = [
             "상품 상세페이지 이동 앱 링크 연동",
             "앱 연동 처리(방송종료 후 상품 상세 자동 이동 처리)"
         ],
-        "image": "/images/image2.jpg"
+        "imageUrl": "/images/develop/image2.png"
     },
     {
         "id": 3,
@@ -49,7 +49,7 @@ const devlopList = [
         "detail": [
             "APP 화면 및 기능 동기화(컴포넌트 분기 처리 및 기능 추가/수정)"
         ],
-        "image": "/images/image3.jpg"
+        "imageUrl": "/images/develop/image3.png"
     },
     {
         "id": 4,
@@ -67,7 +67,7 @@ const devlopList = [
             "경매 상품 노출 처리",
             "낙찰 시 레어어 팝업 노출 이벤트 처리"
         ],
-        "image": "/images/image4.jpg"
+        "imageUrl": "/images/develop/image4.png"
     },
     {
         "id": 5,
@@ -83,7 +83,7 @@ const devlopList = [
             "장바구니 페이지 내 장바구니 쿠폰 UI 노출 조건 개발 및 금액에 따른 게이지 계산 연동",
             "주문 취소 시 쿠폰 깨짐 및 회수 API 연동 처리"
         ],
-        "image": "/images/image5.jpg"
+        "imageUrl": ""
     },
     {
         "id": 6,
@@ -101,7 +101,7 @@ const devlopList = [
             "친구초대하기 페이지 개발",
             "구매미션 페이지 개발"
         ],
-        "image": "/images/image6.jpg"
+        "imageUrl": "/images/develop/image6.png"
     },
     {
         "id": 7,
@@ -117,7 +117,7 @@ const devlopList = [
             "출금 신청 페이지(계좌입력 및 API 연동)",
             "출금 완료 페이지 개발"
         ],
-        "image": "/images/image7.jpg"
+        "imageUrl": "/images/develop/image7.png"
     },
     {
         "id": 8,
@@ -131,7 +131,7 @@ const devlopList = [
         "detail": [
             "슬라이드배너 터치 스와이프 및 인디케이터 개발"
         ],
-        "image": "/images/image8.jpg"
+        "imageUrl": "/images/develop/image8.png"
     },
     {
         "id": 9,
@@ -147,7 +147,7 @@ const devlopList = [
             "결제페이지 OKcashbag 포인트 조회 및 결제 연동",
             "결제완료 페이지 OKcashbag 포인트 사용에 따른 주문 확인 및 상세정보 UI 분기 처리"
         ],
-        "image": "/images/image9.jpg"
+        "imageUrl": "/images/develop/image9.png"
     },
     {
         "id": 10,
@@ -168,7 +168,7 @@ const devlopList = [
             "출금 계좌입력 페이지 개발(은행 선택 옵션 리스트 노출 및 API 연동 계좌 정보 유효성 체크)",
             "출금 신청 완료 페이지 개발"
         ],
-        "image": "/images/image10.jpg"
+        "imageUrl": "/images/develop/image10.jpg"
     },
     {
         "id": 11,
@@ -186,7 +186,7 @@ const devlopList = [
             "반품 프로세스 개발(신청접수 - 접수 완료)",
             "교환 프로세스 개발(신청접수 - 접수 완료)"
         ],
-        "image": "/images/image11.jpg"
+        "imageUrl": "/images/develop/image11.png"
     }
 ]
 

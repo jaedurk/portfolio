@@ -1,14 +1,19 @@
 import '/public/styles/develop.scss';
+import Image from "next/image";
 
 export default async function Develop() {
     const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/develop', {cache: 'no-store'});
     const developList = await response.json();
+    console.log('test : ', developList);
 
     return (
         <section className="front">
             <ul>
                 {developList.map((developItem) => {
                     return <li key={developItem.id}>
+                        <p><Image className={!developItem.imageUrl && 'no-image'}
+                            src={developItem.imageUrl ? developItem.imageUrl : '/images/no-img.jpg'}
+                            alt={developItem.name} width={360} height={741}/></p>
                         <div>
                             <p>프로젝트명 : {developItem.name}</p>
                             <p>기간 : {developItem.period}</p>
