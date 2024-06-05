@@ -4,7 +4,6 @@ import Image from "next/image";
 export default async function Develop() {
     const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/develop', {cache: 'no-store'});
     const developList = await response.json();
-    console.log('test : ', developList);
 
     return (
         <section className="front">
