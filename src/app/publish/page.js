@@ -19,6 +19,7 @@ export default async function Publish() {
                             <p>URL : {publishItem.url ?
                                 <Link href={publishItem.url}>{publishItem.url}</Link> : 'URL이 변경되었거나 존재하지 않습니다'}</p>
                             <p>직무 : {publishItem.detail}</p>
+                            <p>기여도 : {publishItem.contribution}%</p>
                         </div>
                     </li>
                 })}

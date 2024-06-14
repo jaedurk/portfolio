@@ -22,6 +22,7 @@ export default async function Develop() {
                             <ul>상세내용 {developItem.detail.map((detailList, detailIndex) => {
                                 return <li key={detailIndex}>{detailList}</li>
                             })}</ul>
+                            <p>기여도 : {developItem.contribution}%</p>
                         </div>
                     </li>
                 })}
