@@ -367,7 +367,7 @@ const publishList = [
         "detail": "이용안내 하드코딩 페이지 퍼블리싱",
         "url": "",
         "imageUrl": "",
-        "contribution": 100
+        "contribution": 50
     },
     {
         "id": 47,
