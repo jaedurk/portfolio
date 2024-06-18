@@ -15,7 +15,7 @@ const publishList = [
         "detail": "상단메뉴 동적 UI 구현(반응형웹)",
         "url": "http://lib.dorip.ac.kr/",
         "imageUrl": "dorip.jpg",
-        "contribution": 100
+        "contribution": 50
     },
     {
         "id": 3,
@@ -383,7 +383,7 @@ const publishList = [
         "detail": "이용안내 하드코딩 페이지 퍼블리싱",
         "url": "http://honors.hongik.ac.kr/",
         "imageUrl": "hongik.png",
-        "contribution": 100
+        "contribution": 50
     },
     {
         "id": 49,
