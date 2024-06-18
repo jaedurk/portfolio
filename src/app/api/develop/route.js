@@ -107,7 +107,7 @@ const devlopList = [
             "구매미션 페이지 개발"
         ],
         "imageUrl": "/images/develop/image6.png",
-        "contribution": 100
+        "contribution": 40
     },
     {
         "id": 7,
@@ -124,7 +124,7 @@ const devlopList = [
             "출금 완료 페이지 개발"
         ],
         "imageUrl": "/images/develop/image7.png",
-        "contribution": 100
+        "contribution": 40
     },
     {
         "id": 8,
@@ -139,7 +139,7 @@ const devlopList = [
             "슬라이드배너 터치 스와이프 및 인디케이터 개발"
         ],
         "imageUrl": "/images/develop/image8.png",
-        "contribution": 100
+        "contribution": 50
     },
     {
         "id": 9,
@@ -197,7 +197,7 @@ const devlopList = [
             "교환 프로세스 개발(신청접수 - 접수 완료)"
         ],
         "imageUrl": "/images/develop/image11.png",
-        "contribution": 90
+        "contribution": 40
     }
 ]
 
