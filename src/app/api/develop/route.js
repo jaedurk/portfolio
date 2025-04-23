@@ -198,7 +198,90 @@ const devlopList = [
         ],
         "imageUrl": "/images/develop/image11.png",
         "contribution": 40
+    },
+    {
+        "id": 12,
+        "name": "동패인터내셔널 웹사이트 구축",
+        "period": "2024.09 ~ 2024.09",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "Bootstrap"
+        ],
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "관리자 제품 등록 프론트엔드 개발",
+        ],
+        "imageUrl": "/images/develop/site-image-02-01.jpg",
+        "imageUrl2": "/images/develop/site-image-02-02.jpg",
+        "contribution": 100,
+        "url": "http://dongpae.cafe24.com/"
+    },
+    {
+        "id": 13,
+        "name": "동패 아이스업 웹사이트 구축",
+        "period": "2024.09 ~ 2024.09",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "Bootstrap",
+            "three.js"
+        ],
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "모델링 연동 및 콘트롤 개발",
+        ],
+        "imageUrl": "/images/develop/site-image-03.jpg",
+        "contribution": 100,
+        "url": "http://iceup2025.cafe24.com/"
+    },
+    {
+        "id": 14,
+        "name": "발맥스 기업 웹사이트 구축",
+        "period": "2024.10 ~ 2024.10",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "three.js"
+        ],
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "모델링 연동 및 콘트롤 개발",
+            "블로그/포트폴리오 리스트, 상세 페이지 개발",
+            "관리자 컨텐츠 CRUD API 연동"
+        ],
+        "imageUrl": "/images/develop/site-image-04.jpg",
+        "contribution": 100,
+        "url": "http://valmax2024.cafe24.com/"
+    },
+    {
+        "id": 15,
+        "name": "인천스타트업파크 노인복지회관 화재감지시스템",
+        "period": "2024.11 ~ 2024.11",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "three.js"
+        ],
+        "detail": [
+            "로그인 및 모델링 연동 페이지 퍼블리싱",
+            "층별 센서 정보 API 연동",
+            "화재 시 경보 화면 연동",
+            "모델링 층별 그룹화 및 이동 처리"
+        ],
+        // "imageUrl": "/images/develop/site-image-05.jpg",
+        "contribution": 100,
+        // "url": "http://valmax2024.cafe24.com/"
     }
+
 ]
 
 export async function GET() {

@@ -12,6 +12,8 @@
       color: #101010;
       display: flex;
       border: 3px solid #eee;
+      gap: 0 30px;
+      align-items: center;
 
       &:first-child {
         margin-top: 0;
@@ -19,6 +21,7 @@
 
       > p {
         margin-right: 20px;
+        width: 360px;
 
         .no-image {
           width: 360px !important;

@@ -393,7 +393,15 @@ const publishList = [
         "imageUrl": "publish01.png",
         "mobile": true,
         "contribution": 100
-    }
+    },
+    {
+        "id": 50,
+        "name": "현대 엔지니어링 웹사이트 구축",
+        "detail": "사용자 전체 페이지 퍼블리싱",
+        "url": "https://hdco97.com/",
+        "imageUrl": "site-image-01.jpg",
+        "contribution": 100
+    },
 ]
 
 export async function GET() {

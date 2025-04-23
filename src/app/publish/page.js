@@ -4,7 +4,8 @@ import Image from "next/image";
 
 export default async function Publish() {
     const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/publish', {cache: 'no-store'});
-    const publishList = await response.json();
+    // const publishList = await response.json(); //오름차순
+    const publishList = (await response.json()).sort((a, b) => b.id - a.id); //내림차순
 
     return (
         <section className="publish">
