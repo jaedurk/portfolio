@@ -374,9 +374,7 @@ const devlopList = [
             "Next.js 14",
             "HTML5",
             "SCSS",
-            "Axios",
-            "three.js",
-            "gsap"
+            "Axios"
         ],
         "imageUrl": "/images/develop/site-image-10.jpg",
         "detail": [
