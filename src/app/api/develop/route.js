@@ -201,7 +201,7 @@ const devlopList = [
     },
     {
         "id": 12,
-        "name": "동패인터내셔널 웹사이트 구축",
+        "name": "동패인터내셔널 웹사이트 구축(반응형웹)",
         "period": "2024.09 ~ 2024.09",
         "skills": [
             "Next.js 14",
@@ -221,7 +221,7 @@ const devlopList = [
     },
     {
         "id": 13,
-        "name": "동패 아이스업 웹사이트 구축",
+        "name": "동패 아이스업 웹사이트 구축(반응형웹)",
         "period": "2024.09 ~ 2024.09",
         "skills": [
             "Next.js 14",
@@ -241,7 +241,7 @@ const devlopList = [
     },
     {
         "id": 14,
-        "name": "발맥스 기업 웹사이트 구축",
+        "name": "발맥스 기업 웹사이트 구축(반응형웹)",
         "period": "2024.10 ~ 2024.10",
         "skills": [
             "Next.js 14",
@@ -269,7 +269,8 @@ const devlopList = [
             "HTML5",
             "SCSS",
             "Axios",
-            "three.js"
+            "three.js",
+            "gsap"
         ],
         "detail": [
             "로그인 및 모델링 연동 페이지 퍼블리싱",
@@ -277,11 +278,118 @@ const devlopList = [
             "화재 시 경보 화면 연동",
             "모델링 층별 그룹화 및 이동 처리"
         ],
-        // "imageUrl": "/images/develop/site-image-05.jpg",
         "contribution": 100,
         // "url": "http://valmax2024.cafe24.com/"
-    }
+    },
+    {
+        "id": 16,
+        "name": "대동도어 기업 웹사이트 구축(반응형웹)",
+        "period": "2024.12 ~ 2024.12",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "three.js",
+            "gsap"
+        ],
+        "imageUrl": "/images/develop/site-image-06.jpg",
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "사용자 채용공고 리스트 및 입사지원 프로세스 프론트엔드 개발",
+            "사용자 모델링 연동 및 버튼 이벤트 구현",
+            "관리자 컨텐츠 등록 프론트엔드 개발",
+            "관리자 채용 공고 리스트 및 등록/수정 프론트엔드 개발",
+        ],
+        "contribution": 100,
+        "url": "http://ddd2025.cafe24.com/"
+    },
+    {
+        "id": 17,
+        "name": "디케이락 웹사이트 젶무 검색기능 구현",
+        "period": "2024.12 ~ 2024.12",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+        ],
+        "imageUrl": "/images/develop/site-image-07.jpg",
+        "detail": [
+            "사용자 화면 검색기능 적용 및 리스트 화면 퍼블리싱",
+        ],
+        "contribution": 100,
+        "url": "http://ddd2025.cafe24.com/"
+    },
+    {
+        "id": 18,
+        "name": "KCL Valve 기업 웹사이트 구축(반응형웹)",
+        "period": "2024.01 ~ 2024.01",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "three.js",
+        ],
+        "imageUrl": "/images/develop/site-image-08.jpg",
+        "imageUrl2": "/images/develop/site-image-08-02.jpg",
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "사용자 프로젝트 목록/상세 프론트엔드 개발",
+            "사용자 모델링 연동",
+            "관리자 프로젝트 카테고리 관리 및 목록/등록/수정 프론트엔드 개발",
+        ],
+        "contribution": 100,
+        "url": "https://valvekcl.com/"
+    },
+    {
+        "id": 19,
+        "name": "이지시스템 기업 웹사이트 구축(반응형웹)",
+        "period": "2024.02 ~ 2024.02",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "three.js",
+            "gsap"
+        ],
+        "imageUrl": "/images/develop/site-image-09.jpg",
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "사용자 메인 페이지 모델링 연동 및 버튼 이벤트 구현",
+            "사용자 컨텐츠(카탈로그, 홍보영상, 기술자료) 목록/상세 프론트엔드 개발",
+            "관리자 컨텐츠(카탈로그, 홍보영상, 기술자료) 목록/등록/수정 프론트엔드 개발",
+        ],
+        "contribution": 100,
+        "url": "http://easysys2025.cafe24.com/"
+    },
 
+    {
+        "id": 20,
+        "name": "우신에이펙 기업 웹사이트 구축(반응형웹)",
+        "period": "2024.03 ~ 2024.03",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "three.js",
+            "gsap"
+        ],
+        "imageUrl": "/images/develop/site-image-10.jpg",
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "사용자 메인 페이지 모델링 연동 및 버튼 이벤트 구현",
+            "사용자 조명제품 목록/상세 API 연동",
+            "사용자 컨텐츠(시공사례, 홍보영상, 공지사항) 목록/상세 프론트엔드 개발",
+            "관리자 조명제품 카테고리 및 목록/등록/수정 프론트엔드 개발",
+            "관리자 컨텐츠(시공사례, 홍보영상, 공지사항) 목록/등록/수정 프론트엔드 개발",
+        ],
+        "contribution": 100,
+        "url": "http://wooshin2025.cafe24.com/"
+    },
 ]
 
 export async function GET() {
