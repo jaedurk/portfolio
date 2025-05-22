@@ -279,7 +279,7 @@ const devlopList = [
             "모델링 층별 그룹화 및 이동 처리"
         ],
         "contribution": 100,
-        // "url": "http://valmax2024.cafe24.com/"
+        "url": "http://dotsfire.cafe24.com/",
     },
     {
         "id": 16,
