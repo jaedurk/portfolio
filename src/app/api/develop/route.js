@@ -272,6 +272,7 @@ const devlopList = [
             "three.js",
             "gsap"
         ],
+        "imageUrl": "/images/develop/site-image-12.jpg",
         "detail": [
             "로그인 및 모델링 연동 페이지 퍼블리싱",
             "층별 센서 정보 API 연동",
@@ -302,11 +303,11 @@ const devlopList = [
             "관리자 채용 공고 리스트 및 등록/수정 프론트엔드 개발",
         ],
         "contribution": 100,
-        "url": "http://ddd2025.cafe24.com/"
+        "url": "https://hi-lexdoor.com/"
     },
     {
         "id": 17,
-        "name": "디케이락 웹사이트 젶무 검색기능 구현",
+        "name": "디케이락 웹사이트 제품 검색기능 구현",
         "period": "2024.12 ~ 2024.12",
         "skills": [
             "Next.js 14",
@@ -319,7 +320,7 @@ const devlopList = [
             "사용자 화면 검색기능 적용 및 리스트 화면 퍼블리싱",
         ],
         "contribution": 100,
-        "url": "http://ddd2025.cafe24.com/"
+        "url": "https://dklok.com/product-introduction/product-classification/search-product?keyword=DF"
     },
     {
         "id": 18,
@@ -387,6 +388,28 @@ const devlopList = [
         ],
         "contribution": 100,
         "url": "http://wooshin2025.cafe24.com/"
+    },
+    {
+        "id": 21,
+        "name": "AXEED 기업 웹사이트 구축(반응형웹)",
+        "period": "2024.06 ~ 2024.06",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+            "Quill.js"
+        ],
+        "imageUrl": "/images/develop/site-image-11.jpg",
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "사용자 컨텐츠(공지사항, 적용사례, 자료실) 목록/상세 프론트엔드 개발",
+            "관리자 조명제품 카테고리 및 목록/등록/수정 프론트엔드 개발",
+            "관리자 컨텐츠(공지사항, 적용사례, 자료실) 목록/등록/수정 프론트엔드 개발",
+            "관리자 컨텐츠 등록 Quill.js 에디터 적용"
+        ],
+        "contribution": 100,
+        "url": "https://axeed.co.kr/"
     },
 ]
 
