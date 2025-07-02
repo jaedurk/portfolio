@@ -217,7 +217,7 @@ const devlopList = [
         "imageUrl": "/images/develop/site-image-02-01.jpg",
         "imageUrl2": "/images/develop/site-image-02-02.jpg",
         "contribution": 100,
-        "url": "http://dongpae.cafe24.com/"
+        "url": "https://dongpae.co.kr/"
     },
     {
         "id": 13,
@@ -237,7 +237,7 @@ const devlopList = [
         ],
         "imageUrl": "/images/develop/site-image-03.jpg",
         "contribution": 100,
-        "url": "http://iceup2025.cafe24.com/"
+        "url": "https://www.iceup.co.kr/"
     },
     {
         "id": 14,
