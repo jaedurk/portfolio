@@ -258,7 +258,7 @@ const devlopList = [
         ],
         "imageUrl": "/images/develop/site-image-04.jpg",
         "contribution": 100,
-        "url": "http://valmax2024.cafe24.com/"
+        "url": "https://valmax.co.kr/"
     },
     {
         "id": 15,
@@ -325,7 +325,7 @@ const devlopList = [
     {
         "id": 18,
         "name": "KCL Valve 기업 웹사이트 구축(반응형웹)",
-        "period": "2024.01 ~ 2024.01",
+        "period": "2025.01 ~ 2025.01",
         "skills": [
             "Next.js 14",
             "HTML5",
@@ -347,7 +347,7 @@ const devlopList = [
     {
         "id": 19,
         "name": "이지시스템 기업 웹사이트 구축(반응형웹)",
-        "period": "2024.02 ~ 2024.02",
+        "period": "2025.02 ~ 2025.02",
         "skills": [
             "Next.js 14",
             "HTML5",
@@ -364,13 +364,13 @@ const devlopList = [
             "관리자 컨텐츠(카탈로그, 홍보영상, 기술자료) 목록/등록/수정 프론트엔드 개발",
         ],
         "contribution": 100,
-        "url": "http://easysys2025.cafe24.com/"
+        "url": "https://easy-sys.co.kr/"
     },
 
     {
         "id": 20,
         "name": "우신에이펙 기업 웹사이트 구축(반응형웹)",
-        "period": "2024.03 ~ 2024.03",
+        "period": "2025.03 ~ 2025.03",
         "skills": [
             "Next.js 14",
             "HTML5",
@@ -387,12 +387,33 @@ const devlopList = [
             "관리자 컨텐츠(시공사례, 홍보영상, 공지사항) 목록/등록/수정 프론트엔드 개발",
         ],
         "contribution": 100,
-        "url": "http://wooshin2025.cafe24.com/"
+        "url": "https://wooshinapec.com/"
     },
     {
         "id": 21,
+        "name": "대풍코리아",
+        "period": "2025.04 ~ 2024.05",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Axios",
+        ],
+        "imageUrl": "/images/develop/site-image-13.png",
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "사용자 컨텐츠(뉴스) 목록/상세 프론트엔드 개발",
+            "사용자 문의접수 API 연동",
+            "관리자 문의접수 리스트/상세 개발",
+            "관리자 컨텐츠 목록/등록/수정 프론트엔드 개발",
+        ],
+        "contribution": 100,
+        "url": "https://daepung.com/"
+    },
+    {
+        "id": 22,
         "name": "AXEED 기업 웹사이트 구축(반응형웹)",
-        "period": "2024.06 ~ 2024.06",
+        "period": "2025.06 ~ 2025.06",
         "skills": [
             "Next.js 14",
             "HTML5",
@@ -400,7 +421,7 @@ const devlopList = [
             "Axios",
             "Quill.js"
         ],
-        "imageUrl": "/images/develop/site-image-11.jpg",
+        "imageUrl": "/images/develop/site-image-12.jpg",
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 컨텐츠(공지사항, 적용사례, 자료실) 목록/상세 프론트엔드 개발",
