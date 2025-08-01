@@ -421,7 +421,7 @@ const devlopList = [
             "Axios",
             "Quill.js"
         ],
-        "imageUrl": "/images/develop/site-image-12.jpg",
+        "imageUrl": "/images/develop/site-image-11.jpg",
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 컨텐츠(공지사항, 적용사례, 자료실) 목록/상세 프론트엔드 개발",
