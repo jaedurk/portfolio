@@ -280,7 +280,7 @@ const devlopList = [
             "모델링 층별 그룹화 및 이동 처리"
         ],
         "contribution": 100,
-        "url": "http://dotsfire.cafe24.com/",
+        "url": "https://insiseol-silver-git-main-bmcnets-projects.vercel.app/",
     },
     {
         "id": 16,
