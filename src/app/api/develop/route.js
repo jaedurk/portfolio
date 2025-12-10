@@ -432,6 +432,23 @@ const devlopList = [
         "contribution": 100,
         "url": "https://axeed.co.kr/"
     },
+    {
+        "id": 23,
+        "name": "대동 HI-LEX 전자카탈로그 개발",
+        "period": "2025.11 ~ 2025.11",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+        ],
+        "imageUrl": "/images/develop/site-image-13.jpg",
+        "detail": [
+            "카탈로그 전체 페이지 퍼블리싱",
+            "카탈로그 페이지 처리 개발"
+        ],
+        "contribution": 100,
+        "url": "https://hi-lex-product-catalogue.vercel.app/"
+    },
 ]
 
 export async function GET() {
