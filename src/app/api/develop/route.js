@@ -229,7 +229,7 @@ const devlopList = [
             "SCSS",
             "Axios",
             "Bootstrap",
-            "three.js"
+            "Three.js"
         ],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
@@ -248,7 +248,7 @@ const devlopList = [
             "HTML5",
             "SCSS",
             "Axios",
-            "three.js"
+            "Three.js"
         ],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
@@ -269,7 +269,7 @@ const devlopList = [
             "HTML5",
             "SCSS",
             "Axios",
-            "three.js",
+            "Three.js",
             "gsap"
         ],
         "imageUrl": "/images/develop/site-image-12.jpg",
@@ -291,7 +291,7 @@ const devlopList = [
             "HTML5",
             "SCSS",
             "Axios",
-            "three.js",
+            "Three.js",
             "gsap"
         ],
         "imageUrl": "/images/develop/site-image-06.jpg",
@@ -331,7 +331,7 @@ const devlopList = [
             "HTML5",
             "SCSS",
             "Axios",
-            "three.js",
+            "Three.js",
         ],
         "imageUrl": "/images/develop/site-image-08.jpg",
         "imageUrl2": "/images/develop/site-image-08-02.jpg",
@@ -353,7 +353,7 @@ const devlopList = [
             "HTML5",
             "SCSS",
             "Axios",
-            "three.js",
+            "Three.js",
             "gsap"
         ],
         "imageUrl": "/images/develop/site-image-09.jpg",
@@ -448,6 +448,69 @@ const devlopList = [
         ],
         "contribution": 100,
         "url": "https://hi-lex-product-catalogue.vercel.app/"
+    },
+    {
+        "id": 24,
+        "name": "화신볼트 기업 웹사이트 구축",
+        "period": "2025.12 ~ 2026.02",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Three.js"
+        ],
+        "imageUrl": "/images/develop/site-image-14.png",
+        "detail": [
+            "사용자 전체 페이지 퍼블리싱",
+            "사용자 컨텐츠(메타정보, 공지사항, 연혁관리, 문의관리 등) 목록/상세 프론트엔드 개발",
+            "관리자 조명제품 카테고리 및 목록/등록/수정 프론트엔드 개발",
+            "관리자 컨텐츠(메타정보, 공지사항, 적용사례, 자료실) 목록/등록/수정 프론트엔드 개발",
+            "관리자 컨텐츠 등록 Quill.js 에디터 적용"
+        ],
+        "contribution": 100,
+        "url": "https://www.hwashinbolt.co.kr/"
+    },
+    {
+        "id": 25,
+        "name": "DN Solution 3D 작업지시서 등록 및 관리 시스템",
+        "period": "2026.02 ~ 2025.05",
+        "skills": [
+            "Next.js 14",
+            "HTML5",
+            "SCSS",
+            "Three.js"
+        ],
+        "imageUrl": "/images/develop/site-image-15.png",
+        "detail": [
+            "전체 페이지 퍼블리싱",
+            "로그인/로그아웃 프론트엔드 개발",
+            "관리자 3D 모델링 및 작업지시서 등록/수정/목록  API 연동 및 프론트엔드 개발",
+            "사용자(작업자) 작업지시서 목록 및 기타사항 API 연동 및 프론트엔드 개발",
+
+        ],
+        "contribution": 100,
+    },
+    {
+        "id": 26,
+        "name": "대동하이렉스 기업 웹사이트 구축",
+        "period": "2026.06 ~ 진행중",
+        "skills": [
+            "PHP CI4",
+            "HTML5",
+            "CSS",
+            "jQuery",
+            "Ajax",
+            "Three.js",
+            "Bootstrap5",
+        ],
+        "imageUrl": "/images/develop/site-image-16.png",
+        "detail": [
+            "사용자/관리자 전체 페이지 퍼블리싱",
+            "사용자 컨텐츠(메타정보, 공지사항, 연혁관리, 문의관리 등) 목록/상세 프론트엔드 개발",
+            "관리자 컨텐츠(메타정보, 공지사항, 연혁관리, 문의관리 등) 목록/등록/수정 프론트엔드 개발",
+            "관리자 컨텐츠 등록 Quill.js 에디터 적용"
+        ],
+        "contribution": 100,
     },
 ]
 
