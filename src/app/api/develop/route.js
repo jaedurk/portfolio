@@ -511,6 +511,7 @@ const devlopList = [
             "관리자 컨텐츠 등록 Quill.js 에디터 적용"
         ],
         "contribution": 100,
+        "url": "http://hilex2026.cafe24.com/"
     },
 ]
 
