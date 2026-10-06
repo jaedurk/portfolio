@@ -489,7 +489,7 @@ const devlopList = [
 
         ],
         "contribution": 100,
-        "url": "dnsolutions.vercel.app"
+        "url": "https://dnsolutions.vercel.app"
     },
     {
         "id": 26,
