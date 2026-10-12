@@ -29,7 +29,7 @@ export default function Profile() {
                             <li>Publish : HTML, CSS, SASS(SCSS), Vanilla JS, jQuery, Bootstrap, Web Accessibility, Cross
                                 Web Browsing, Responsive Web
                             </li>
-                            <li>Front-end : HTML, CSS, Vanilla JS, jQuery, React, Next.js, Socket.IO</li>
+                            <li>Front-end : HTML, CSS, Vanilla JS, jQuery, React, Next.js, Socket.IO, Three.js</li>
                             <li>Version Control : svn, git</li>
                             <li>Communication : Jira, Confluence, Zeplin, Figma</li>
                         </ul>
