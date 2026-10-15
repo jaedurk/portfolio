@@ -2,13 +2,14 @@
 
 import '/public/styles/contact.scss';
 import {useState} from "react";
+import type {ChangeEvent, FormEvent} from "react";
 
 export default function Contact() {
     const [isLength1, setIsLength1] = useState(false);
     const [isLength2, setIsLength2] = useState(false);
     const [isLength3, setIsLength3] = useState(false);
 
-    function handleInputChange1(event) {
+    function handleInputChange1(event: ChangeEvent<HTMLInputElement>) {
         if (event.target.value !== '') {
             setIsLength1(true);
         } else {
@@ -16,7 +17,7 @@ export default function Contact() {
         }
     }
 
-    function handleInputChange2(event) {
+    function handleInputChange2(event: ChangeEvent<HTMLInputElement>) {
         if (event.target.value !== '') {
             setIsLength2(true);
         } else {
@@ -24,7 +25,7 @@ export default function Contact() {
         }
     }
 
-    function handleInputChange3(event) {
+    function handleInputChange3(event: ChangeEvent<HTMLTextAreaElement>) {
         if (event.target.value !== '') {
             setIsLength3(true);
         } else {
@@ -32,7 +33,7 @@ export default function Contact() {
         }
     }
 
-    async function handleSubmit(event) {
+    async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
 
         if (!isLength1) {
@@ -46,7 +47,7 @@ export default function Contact() {
             return;
         }
 
-        const formData = new FormData(event.target);
+        const formData = new FormData(event.currentTarget);
 
         const response = await fetch('/api/contact', {
             method: 'post',

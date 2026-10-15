@@ -1,6 +1,7 @@
 import {NextResponse} from "next/server";
+import type {DevelopItem} from "@/types/portfolio";
 
-const devlopList = [
+const devlopList: DevelopItem[] = [
     {
         "id": 1,
         "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 장바구니 개편",
@@ -12,7 +13,7 @@ const devlopList = [
         "detail": [
             "장바구니 페이지 UI 수정"
         ],
-        "imageUrl": "",
+        "images": [],
         "contribution": 50
     },
     {
@@ -35,7 +36,7 @@ const devlopList = [
             "상품 상세페이지 이동 앱 링크 연동",
             "앱 연동 처리(방송종료 후 상품 상세 자동 이동 처리)"
         ],
-        "imageUrl": "/images/develop/image2.png",
+        "images": ["/images/develop/image2.png"],
         "contribution": 90
     },
     {
@@ -51,7 +52,7 @@ const devlopList = [
         "detail": [
             "APP 화면 및 기능 동기화(컴포넌트 분기 처리 및 기능 추가/수정)"
         ],
-        "imageUrl": "/images/develop/image3.png",
+        "images": ["/images/develop/image3.png"],
         "contribution": 40
     },
     {
@@ -70,7 +71,7 @@ const devlopList = [
             "경매 상품 노출 처리",
             "낙찰 시 레어어 팝업 노출 이벤트 처리"
         ],
-        "imageUrl": "/images/develop/image4.png",
+        "images": ["/images/develop/image4.png"],
         "contribution": 100
     },
     {
@@ -87,7 +88,7 @@ const devlopList = [
             "장바구니 페이지 내 장바구니 쿠폰 UI 노출 조건 개발 및 금액에 따른 게이지 계산 연동",
             "주문 취소 시 쿠폰 깨짐 및 회수 API 연동 처리"
         ],
-        "imageUrl": "",
+        "images": [],
         "contribution": 80
     },
     {
@@ -106,7 +107,7 @@ const devlopList = [
             "친구초대하기 페이지 개발",
             "구매미션 페이지 개발"
         ],
-        "imageUrl": "/images/develop/image6.png",
+        "images": ["/images/develop/image6.png"],
         "contribution": 40
     },
     {
@@ -123,7 +124,7 @@ const devlopList = [
             "출금 신청 페이지(계좌입력 및 API 연동)",
             "출금 완료 페이지 개발"
         ],
-        "imageUrl": "/images/develop/image7.png",
+        "images": ["/images/develop/image7.png"],
         "contribution": 40
     },
     {
@@ -138,7 +139,7 @@ const devlopList = [
         "detail": [
             "슬라이드배너 터치 스와이프 및 인디케이터 개발"
         ],
-        "imageUrl": "/images/develop/image8.png",
+        "images": ["/images/develop/image8.png"],
         "contribution": 50
     },
     {
@@ -155,7 +156,7 @@ const devlopList = [
             "결제페이지 OKcashbag 포인트 조회 및 결제 연동",
             "결제완료 페이지 OKcashbag 포인트 사용에 따른 주문 확인 및 상세정보 UI 분기 처리"
         ],
-        "imageUrl": "/images/develop/image9.png",
+        "images": ["/images/develop/image9.png"],
         "contribution": 100
     },
     {
@@ -177,7 +178,7 @@ const devlopList = [
             "출금 계좌입력 페이지 개발(은행 선택 옵션 리스트 노출 및 API 연동 계좌 정보 유효성 체크)",
             "출금 신청 완료 페이지 개발"
         ],
-        "imageUrl": "/images/develop/image10.jpg",
+        "images": ["/images/develop/image10.jpg"],
         "contribution": 60
     },
     {
@@ -196,7 +197,7 @@ const devlopList = [
             "반품 프로세스 개발(신청접수 - 접수 완료)",
             "교환 프로세스 개발(신청접수 - 접수 완료)"
         ],
-        "imageUrl": "/images/develop/image11.png",
+        "images": ["/images/develop/image11.png"],
         "contribution": 40
     },
     {
@@ -214,8 +215,7 @@ const devlopList = [
             "사용자 전체 페이지 퍼블리싱",
             "관리자 제품 등록 프론트엔드 개발",
         ],
-        "imageUrl": "/images/develop/site-image-02-01.jpg",
-        "imageUrl2": "/images/develop/site-image-02-02.jpg",
+        "images": ["/images/develop/site-image-02-01.jpg", "/images/develop/site-image-02-02.jpg"],
         "contribution": 100,
         "url": "https://dongpae.co.kr/"
     },
@@ -235,7 +235,7 @@ const devlopList = [
             "사용자 전체 페이지 퍼블리싱",
             "모델링 연동 및 콘트롤 개발",
         ],
-        "imageUrl": "/images/develop/site-image-03.jpg",
+        "images": ["/images/develop/site-image-03.jpg"],
         "contribution": 100,
         "url": "https://www.iceup.co.kr/"
     },
@@ -256,7 +256,7 @@ const devlopList = [
             "블로그/포트폴리오 리스트, 상세 페이지 개발",
             "관리자 컨텐츠 CRUD API 연동"
         ],
-        "imageUrl": "/images/develop/site-image-04.jpg",
+        "images": ["/images/develop/site-image-04.jpg"],
         "contribution": 100,
         "url": "https://valmax.co.kr/"
     },
@@ -272,7 +272,7 @@ const devlopList = [
             "Three.js",
             "gsap"
         ],
-        "imageUrl": "/images/develop/site-image-12.jpg",
+        "images": ["/images/develop/site-image-12.jpg"],
         "detail": [
             "로그인 및 모델링 연동 페이지 퍼블리싱",
             "층별 센서 정보 API 연동",
@@ -294,7 +294,7 @@ const devlopList = [
             "Three.js",
             "gsap"
         ],
-        "imageUrl": "/images/develop/site-image-06.jpg",
+        "images": ["/images/develop/site-image-06.jpg"],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 채용공고 리스트 및 입사지원 프로세스 프론트엔드 개발",
@@ -315,7 +315,7 @@ const devlopList = [
             "SCSS",
             "Axios",
         ],
-        "imageUrl": "/images/develop/site-image-07.jpg",
+        "images": ["/images/develop/site-image-07.jpg"],
         "detail": [
             "사용자 화면 검색기능 적용 및 리스트 화면 퍼블리싱",
         ],
@@ -333,8 +333,7 @@ const devlopList = [
             "Axios",
             "Three.js",
         ],
-        "imageUrl": "/images/develop/site-image-08.jpg",
-        "imageUrl2": "/images/develop/site-image-08-02.jpg",
+        "images": ["/images/develop/site-image-08.jpg", "/images/develop/site-image-08-02.jpg"],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 프로젝트 목록/상세 프론트엔드 개발",
@@ -356,7 +355,7 @@ const devlopList = [
             "Three.js",
             "gsap"
         ],
-        "imageUrl": "/images/develop/site-image-09.jpg",
+        "images": ["/images/develop/site-image-09.jpg"],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 메인 페이지 모델링 연동 및 버튼 이벤트 구현",
@@ -377,7 +376,7 @@ const devlopList = [
             "SCSS",
             "Axios"
         ],
-        "imageUrl": "/images/develop/site-image-10.jpg",
+        "images": ["/images/develop/site-image-10.jpg"],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 메인 페이지 모델링 연동 및 버튼 이벤트 구현",
@@ -399,7 +398,7 @@ const devlopList = [
             "SCSS",
             "Axios",
         ],
-        "imageUrl": "/images/develop/site-image-13.png",
+        "images": ["/images/develop/site-image-13.png"],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 컨텐츠(뉴스) 목록/상세 프론트엔드 개발",
@@ -421,7 +420,7 @@ const devlopList = [
             "Axios",
             "Quill.js"
         ],
-        "imageUrl": "/images/develop/site-image-11.jpg",
+        "images": ["/images/develop/site-image-11.jpg"],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 컨텐츠(공지사항, 적용사례, 자료실) 목록/상세 프론트엔드 개발",
@@ -441,7 +440,7 @@ const devlopList = [
             "HTML5",
             "SCSS",
         ],
-        "imageUrl": "/images/develop/site-image-13.jpg",
+        "images": ["/images/develop/site-image-13.jpg"],
         "detail": [
             "카탈로그 전체 페이지 퍼블리싱",
             "카탈로그 페이지 처리 개발"
@@ -459,7 +458,7 @@ const devlopList = [
             "SCSS",
             "Three.js"
         ],
-        "imageUrl": "/images/develop/site-image-14.png",
+        "images": ["/images/develop/site-image-14.png"],
         "detail": [
             "사용자 전체 페이지 퍼블리싱",
             "사용자 컨텐츠(메타정보, 공지사항, 연혁관리, 문의관리 등) 목록/상세 프론트엔드 개발",
@@ -480,7 +479,7 @@ const devlopList = [
             "SCSS",
             "Three.js"
         ],
-        "imageUrl": "/images/develop/site-image-15.png",
+        "images": ["/images/develop/site-image-15.png"],
         "detail": [
             "전체 페이지 퍼블리싱",
             "로그인/로그아웃 프론트엔드 개발",
@@ -504,7 +503,7 @@ const devlopList = [
             "Three.js",
             "Bootstrap5",
         ],
-        "imageUrl": "/images/develop/site-image-16.png",
+        "images": ["/images/develop/site-image-16.png"],
         "detail": [
             "사용자/관리자 전체 페이지 퍼블리싱",
             "사용자 컨텐츠(메타정보, 공지사항, 연혁관리, 문의관리 등) 목록/상세 프론트엔드 개발",

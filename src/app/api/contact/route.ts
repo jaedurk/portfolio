@@ -1,15 +1,14 @@
 import {NextResponse} from 'next/server'
+import nodemailer from 'nodemailer';
 
-const nodemailer = require('nodemailer');
-
-export async function POST(request) {
+export async function POST(request: Request) {
     const {EMAIL_SERVICE, AUTH_USER, AUTH_PASS} = process.env;
 
     console.log("dealing with request");
     const formData = await request.formData();
-    const subject = formData.get('subject');
-    const email = formData.get('email');
-    const message = formData.get('message');
+    const subject = String(formData.get('subject') ?? '');
+    const email = String(formData.get('email') ?? '');
+    const message = String(formData.get('message') ?? '');
 
     const transporter = nodemailer.createTransport({
         service: EMAIL_SERVICE,
@@ -32,6 +31,6 @@ export async function POST(request) {
     } catch (error) {
         // console.log(error);
 
-        NextResponse.status(500).json({message: "COULD NOT SEND MESSAGE"});
+        return NextResponse.json({message: "COULD NOT SEND MESSAGE"}, {status: 500});
     }
 }

@@ -1,27 +1,23 @@
 import '/public/styles/develop.scss';
-import Image from "next/image";
 import Link from "next/link";
+import ImageGallery from "@/app/component/image-gallery";
+import type {DevelopItem} from "@/types/portfolio";
 
 export default async function Develop() {
-    const response = await fetch(process.env.NEXT_PUBLIC_URL + '/api/develop', {cache: 'no-store'});
-    // const developList = await response.json(); //오름차순
-    const developList = (await response.json()).sort((a, b) => b.id - a.id); //내림차순
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/develop`, {cache: 'no-store'});
+    // const developList: DevelopItem[] = await response.json(); //오름차순
+    const developList: DevelopItem[] = ((await response.json()) as DevelopItem[]).sort((a, b) => b.id - a.id); //내림차순
 
     return (
         <section className="front">
             <ul>
                 {developList.map((developItem) => {
                     return <li key={developItem.id}>
-                        <p><Image className={!developItem.imageUrl && 'no-image'}
-                            src={developItem.imageUrl ? developItem.imageUrl : '/images/no-img.jpg'}
-                            alt={developItem.name} width={360} height={741}
-                            style={{width: "360px", height: "auto"}}/>
-                            {developItem?.imageUrl2 && (
-                                <Image className={!developItem.imageUrl && 'no-image'}
-                                   src={developItem.imageUrl2 ? developItem.imageUrl2 : '/images/no-img.jpg'}
-                                   alt={developItem.name} width={360} height={741}
-                                   style={{width: "360px", height: "auto", marginTop: "10px"}}/>
-                            )}
+                        <p>
+                            <ImageGallery images={developItem.images} alt={developItem.name}
+                                          width={360} height={741}
+                                          imageClassName={developItem.images.length === 0 ? 'no-image' : undefined}
+                                          imageStyle={{width: "360px", height: "auto"}}/>
                         </p>
                         <div>
                             <p>프로젝트명 : {developItem.name}</p>
