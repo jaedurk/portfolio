@@ -1,56 +1,87 @@
 .publish {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 0;
+  > ul {
+    display: grid;
+    gap: var(--sp-6);
+  }
 
-  ul {
-    > li {
-      margin-top: 20px;
-      background-color: #ddd;
-      border-radius: 10px;
-      padding: 20px 20px;
-      color: #101010;
-      display: flex;
-      border: 3px solid #eee;
+  > ul > li {
+    display: grid;
+    grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+    gap: var(--sp-8);
+    align-items: start;
+    padding: var(--sp-6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background-color: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
 
-      &:first-child {
-        margin-top: 0;
-      }
+  > ul > li:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
 
-      > p {
-        margin-right: 20px;
+  /* Screenshot */
+  > ul > li > p img {
+    width: 100%;
+    height: auto;
+    /* Tall mobile captures get cropped to a preview height so every card
+       stays a similar size. The full image is one click away in the slider. */
+    max-height: 300px;
+    object-fit: cover;
+    object-position: top center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface-2);
+  }
 
-        .mobile {
-          width: auto;
-          height: auto;
-        }
-      }
+  > ul > li > div {
+    min-width: 0;
+  }
 
-      > div {
-        padding-top: 30px;
+  /* Project title */
+  > ul > li > div > p:first-child {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    line-height: var(--lh-snug);
+    letter-spacing: -0.025em;
+    color: var(--text);
+  }
 
-        p {
-          margin-top: 20px;
-          font-size: 18px;
+  > ul > li > div > p {
+    margin-top: var(--sp-3);
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+  }
 
-          &:first-child {
-            margin-top: 0;
-          }
-        }
-      }
+  a {
+    color: var(--accent);
+    font-weight: 500;
+    word-break: break-all;
 
-      a {
-        color: #258ddb;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
   }
 }
 
+@media (max-width: 860px) {
+  .publish > ul > li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-5);
+    padding: var(--sp-5);
+  }
 
+  .publish > ul > li > p {
+    max-width: 340px;
+  }
+}
 
-
-
+@media (max-width: 520px) {
+  .publish > ul > li > p {
+    max-width: none;
+  }
+}

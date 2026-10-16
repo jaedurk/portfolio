@@ -1,4 +1,6 @@
-/* Common Style */
+/* ==========================================================================
+   Pretendard
+   ========================================================================== */
 @font-face {
     font-family: 'Pretendard';
     font-weight: 400;
@@ -31,187 +33,165 @@
     font-display: swap;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    letter-spacing: -0.02em;
+/* ==========================================================================
+   Design tokens
+   Every colour, size and space in the site comes from here. Change a value
+   once and it updates everywhere - no need to hunt through page styles.
+   ========================================================================== */
+:root {
+    /* -- Colour (light) -------------------------------------------------- */
+    --bg: #ffffff;
+    --bg-subtle: #f5f7fa;
+    --surface: #ffffff;
+    --surface-2: #f5f7fa;
+    --border: #e4e8ee;
+    --border-strong: #d2d9e3;
+    --text: #11161e;
+    --text-muted: #5a6572;
+    --text-faint: #8a94a3;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-soft: #eef3ff;
+    --accent-on: #ffffff;
+    --header-bg: rgba(255, 255, 255, 0.82);
+
+    --shadow-sm: 0 1px 2px rgba(17, 22, 30, 0.06), 0 1px 3px rgba(17, 22, 30, 0.04);
+    --shadow-md: 0 4px 12px rgba(17, 22, 30, 0.07), 0 2px 4px rgba(17, 22, 30, 0.04);
+    --shadow-lg: 0 12px 32px rgba(17, 22, 30, 0.10), 0 4px 8px rgba(17, 22, 30, 0.04);
+
+    /* -- Type scale -------------------------------------------------------
+       Fluid: each size grows smoothly between a 360px and a 1280px viewport,
+       so there is no separate mobile font size to pick. Ratio ~1.22.        */
+    --fs-xs: clamp(0.75rem, 0.73rem + 0.09vw, 0.8125rem);     /* 12 -> 13 */
+    --fs-sm: clamp(0.8125rem, 0.78rem + 0.14vw, 0.875rem);    /* 13 -> 14 */
+    --fs-base: clamp(0.9375rem, 0.92rem + 0.07vw, 1rem);      /* 15 -> 16 */
+    --fs-md: clamp(1rem, 0.96rem + 0.17vw, 1.125rem);         /* 16 -> 18 */
+    --fs-lg: clamp(1.125rem, 1.04rem + 0.35vw, 1.375rem);     /* 18 -> 22 */
+    --fs-xl: clamp(1.375rem, 1.19rem + 0.78vw, 1.875rem);     /* 22 -> 30 */
+    --fs-2xl: clamp(1.75rem, 1.36rem + 1.74vw, 2.875rem);     /* 28 -> 46 */
+
+    --lh-tight: 1.25;
+    --lh-snug: 1.45;
+    --lh-normal: 1.65;
+
+    /* -- Spacing (4px base) ---------------------------------------------- */
+    --sp-1: 0.25rem;
+    --sp-2: 0.5rem;
+    --sp-3: 0.75rem;
+    --sp-4: 1rem;
+    --sp-5: 1.25rem;
+    --sp-6: 1.5rem;
+    --sp-8: 2rem;
+    --sp-10: 2.5rem;
+    --sp-12: 3rem;
+    --sp-16: 4rem;
+    --sp-20: 5rem;
+
+    /* -- Shape ------------------------------------------------------------ */
+    --radius-sm: 8px;
+    --radius: 12px;
+    --radius-lg: 16px;
+    --radius-full: 999px;
+
+    /* -- Layout ------------------------------------------------------------ */
+    --container: 1120px;
+    --gutter: clamp(1rem, 4vw, 2rem);
 }
 
+/* Dark variant: follows the operating system setting. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0b0f16;
+        --bg-subtle: #0e131b;
+        --surface: #151a23;
+        --surface-2: #1b2230;
+        --border: #232b38;
+        --border-strong: #313b4b;
+        --text: #e6eaf2;
+        --text-muted: #98a3b5;
+        --text-faint: #6b7686;
+        --accent: #38bdf8;
+        --accent-hover: #7dd3fc;
+        --accent-soft: #11202c;
+        --accent-on: #06131d;
+        --header-bg: rgba(11, 15, 22, 0.82);
+
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+    }
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+*,
 *::before,
-*:before,
-*::after,
-*:after {
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
 }
 
-/* set html5 elements to block */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
 }
 
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-q,
-s,
-samp,
-strike,
-strong,
-sub,
-sup,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend {
-    margin: 0;
-    line-height: inherit;
-    vertical-align: top;
-    border: 0 none;
+body {
+    font-family: 'Pretendard', 'Roboto', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+    font-size: var(--fs-base);
+    line-height: var(--lh-normal);
+    color: var(--text);
+    background-color: var(--bg);
+    word-break: keep-all;
+    overflow-wrap: break-word;
     -webkit-font-smoothing: antialiased;
-    scroll-behavior: auto;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    position: relative;
-    min-width: 1000px;
-    margin: 0 auto;
-    font-family: 'Pretendard', 'Roboto', 'Noto Sans KR', Apple SD Gothic Neo, dotum, '돋움', sans-serif;
-    word-break: normal;
-    color: #fff;
-    font-size: 100%;
-    text-size-adjust: 100%;
-    background-color: #272b30;
-
-    -webkit-text-size-adjust: none; /*Chrome, Safari, newer versions of Opera*/
-    -moz-text-size-adjust: none; /*Firefox*/
-    -ms-text-size-adjust: none; /*Ie*/
-    /*-o-text-size-adjust: none; !*old versions of Opera*!*/
-}
-
-header,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-    font-size: 100%;
+    line-height: var(--lh-tight);
 }
 
-html,
-body {
-    font-size: 100%;
+ol, ul {
+    list-style: none;
 }
 
-main {
+img, svg {
     display: block;
-    background: #fff;
-}
-
-caption,
-legend {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    width: 0;
-    height: 0;
-    font-size: 0;
-    overflow: hidden;
-    visibility: hidden;
-}
-
-caption {
-    display: none;
-}
-
-img {
-    border: none;
-    vertical-align: top;
-}
-
-select,
-input {
-    vertical-align: top;
+    max-width: 100%;
+    height: auto;
     border: 0;
-    border-radius: 0;
-    background-color: transparent;
 }
 
-hr {
-    display: none;
-    border: 0 none;
-}
-
-ol,
-ul,
-ul li {
-    list-style: none;
-}
-
-em {
-    font-style: normal;
-}
-
-menu li {
-    list-style: none;
-}
-
-address {
-    display: inline;
-    font-style: normal;
+a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
     appearance: none;
+    border: 0;
+    background: none;
     cursor: pointer;
+    color: inherit;
+    font: inherit;
+}
+
+input, textarea, select {
+    font: inherit;
+    color: inherit;
     border: 0;
     background-color: transparent;
     border-radius: 0;
+}
+
+em, address, dfn {
+    font-style: normal;
 }
 
 table {
@@ -219,183 +199,163 @@ table {
     border-spacing: 0;
 }
 
-fieldset {
-    margin: 0;
-    padding: 0;
-}
-
-input,
-textarea,
-keygen,
-select,
-button,
-pre {
-    font-family: 'Pretendard', 'Roboto', 'Noto Sans KR', Apple SD Gothic Neo, dotum, '돋움', sans-serif;
-    -webkit-appearance: none;
-}
-
-strong,
-em,
-span {
-    font-weight: inherit;
-    line-height: inherit;
-    vertical-align: baseline;
-}
-
-dfn {
-    font-style: normal;
-}
-
-i,
-b,
-u,
-s {
-    font-style: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    text-decoration: none;
-}
-
-code {
-    font-family: monospace;
-}
-
-mark {
-    background-color: transparent;
-}
-
-:focus {
-    outline: 0;
-}
-
-legend.show {
-    position: static;
-    height: auto;
-    width: auto;
-    font-size: inherit;
-    visibility: visible;
+/* Visible focus for keyboard users only. */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .hidden {
     position: absolute;
-    top: -99999px;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-.txt-l {
-    text-align: left !important;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
-.txt-c {
-    text-align: center !important;
+/* ==========================================================================
+   Shell: header / nav / footer
+   ========================================================================== */
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
-.txt-r {
-    text-align: right !important;
+.wrap > section {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: var(--sp-12) var(--gutter) var(--sp-20);
 }
 
-a {
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
-}
-
-::-webkit-input-placeholder::before {
-    content: "FIRST\000ASECOND\000ATHIRD";
-}
-
-::-moz-placeholder::before {
-    content: "FIRST\000ASECOND\000ATHIRD";
-}
-
-:-ms-input-placeholder::before {
-    content: "FIRST\000ASECOND\000ATHIRD";
-}
-
-/* 네이버웨일에서 Search Input 초기화 */
-input::-ms-clear,
-input::-ms-reveal {
-    display: none;
-    width: 0;
-    height: 0;
-}
-
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button,
-input::-webkit-search-results-button,
-input::-webkit-search-results-decoration {
-    display: none;
-}
-
-/* 안드로이드 크롬브라우저 폰트크기 고정 */
-.shipping-info-item .message,
-.page-change-destination .item-info address > span,
-.list-dots > li,
-.done-review p,
-.product-list-item .detail-info .basic-info,
-.product-list-item .detail-info .sub-info,
-.footer .desc {
-    max-height: 100000px;
-}
-
-
-/* Header */
 header {
-    padding-top: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--header-bg);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: var(--sp-4) var(--gutter);
 }
 
 header h1 {
-    max-width: 1000px;
-    margin: 0 auto;
-    font-size: 50px;
+    font-size: var(--fs-lg);
+    letter-spacing: -0.03em;
+    flex-shrink: 0;
 }
 
 header h1 a {
-    color: #25b9e9;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 header nav {
-    background-color: #e9bd25;
-    margin-top: 40px;
+    min-width: 0;
 }
 
 header nav ul {
-    max-width: 1000px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between
+    align-items: center;
+    gap: var(--sp-1);
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 
-header nav ul li {
-    flex: 1;
-    border-left: 1px solid #ded2a7
+header nav ul::-webkit-scrollbar {
+    display: none;
 }
 
-header nav ul li.on {
-    background-color: orange;
-}
-
-header nav ul li:last-child {
-    border-right: 1px solid #ded2a7
-}
-
-header nav ul li a {
+header nav a {
     display: block;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    padding: 10px 0;
-    background: none;
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--radius-full);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--text-muted);
+    transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+header nav a:hover {
+    color: var(--text);
+    background-color: var(--surface-2);
+}
+
+header nav li.on a {
+    color: var(--accent-on);
+    background-color: var(--accent);
 }
 
 footer {
-    padding: 45px 0;
-    background-color: #5f5f5f;
+    flex-shrink: 0;
+    margin-top: var(--sp-16);
+    padding: var(--sp-10) var(--gutter);
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-subtle);
     text-align: center;
-    font-size: 16px;
+}
+
+footer .skills {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
 }
 
 footer .made {
-    margin-top: 15px;
-    font-size: 20px;
+    margin-top: var(--sp-2);
+    font-size: var(--fs-sm);
     font-weight: 600;
+    color: var(--text-faint);
+    letter-spacing: 0.02em;
+}
+
+/* Below ~520px the wordmark and tabs stack so neither gets squeezed. */
+@media (max-width: 520px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--sp-2);
+        padding-top: var(--sp-3);
+        padding-bottom: var(--sp-3);
+    }
+
+    header h1 {
+        font-size: var(--fs-md);
+    }
+
+    header nav ul {
+        justify-content: space-between;
+    }
 }

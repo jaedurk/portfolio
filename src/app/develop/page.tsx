@@ -16,11 +16,10 @@ export default async function Develop() {
                         <p>
                             <ImageGallery images={developItem.images} alt={developItem.name}
                                           width={360} height={741}
-                                          imageClassName={developItem.images.length === 0 ? 'no-image' : undefined}
-                                          imageStyle={{width: "360px", height: "auto"}}/>
+                                          imageClassName={developItem.images.length === 0 ? 'no-image' : undefined}/>
                         </p>
                         <div>
-                            <p>프로젝트명 : {developItem.name}</p>
+                            <p>{developItem.name}</p>
                             <p>기간 : {developItem.period}</p>
                             <p className="skills">사용기술 : {developItem.skills.map((skillList, skillIndex) => {
                                 return <span key={skillIndex}>{skillList}</span>

@@ -17,12 +17,14 @@ export default function RootLayout({children}: {children: ReactNode}) {
         <body suppressHydrationWarning={true}>
         <div className="wrap">
             <header>
-                <h1><Link href="/">Portfolio</Link></h1>
-                <nav>
-                    <ul>
-                        <Navigation nav={navigationMenu}/>
-                    </ul>
-                </nav>
+                <div className="header-inner">
+                    <h1><Link href="/">Portfolio</Link></h1>
+                    <nav>
+                        <ul>
+                            <Navigation nav={navigationMenu}/>
+                        </ul>
+                    </nav>
+                </div>
             </header>
             {children}
             <footer>

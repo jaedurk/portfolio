@@ -1,86 +1,146 @@
 .front {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 0;
-
   > ul {
+    display: grid;
+    gap: var(--sp-6);
+  }
+
+  > ul > li {
+    display: grid;
+    /* Screenshot column is fixed-ish, text takes the rest. minmax(0,…) stops
+       long unbroken strings from blowing the grid out. */
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    gap: var(--sp-8);
+    align-items: start;
+    padding: var(--sp-6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background-color: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  > ul > li:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  /* Screenshot */
+  > ul > li > p {
+    position: sticky;
+    top: calc(var(--sp-16) + var(--sp-6));
+  }
+
+  > ul > li > p img {
+    width: 100%;
+    height: auto;
+    /* Tall mobile captures get cropped to a preview height so every card
+       stays a similar size. The full image is one click away in the slider. */
+    max-height: 300px;
+    object-fit: cover;
+    object-position: top center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--surface-2);
+  }
+
+  /* Text column */
+  > ul > li > div {
+    min-width: 0;
+  }
+
+  /* Project title */
+  > ul > li > div > p:first-child {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    line-height: var(--lh-snug);
+    letter-spacing: -0.025em;
+    color: var(--text);
+  }
+
+  > ul > li > div > p {
+    margin-top: var(--sp-4);
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+  }
+
+  /* Skills as chips rather than a comma-separated run of text. */
+  > ul > li > div > p.skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-2);
+
+    span {
+      display: inline-block;
+      padding: var(--sp-1) var(--sp-3);
+      border-radius: var(--radius-full);
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+  }
+
+  /* Detail list */
+  > ul > li > div > ul {
+    margin-top: var(--sp-5);
+    padding-top: var(--sp-5);
+    border-top: 1px solid var(--border);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--text-faint);
+
     > li {
-      margin-top: 20px;
-      background-color: #ddd;
-      border-radius: 10px;
-      padding: 20px 20px;
-      color: #101010;
-      display: flex;
-      border: 3px solid #eee;
-      gap: 0 30px;
-      align-items: center;
+      position: relative;
+      margin-top: var(--sp-2);
+      padding-left: var(--sp-4);
+      font-weight: 400;
+      line-height: var(--lh-snug);
+      color: var(--text-muted);
 
-      &:first-child {
-        margin-top: 0;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0.62em;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--border-strong);
       }
+    }
+  }
 
-      > p {
-        margin-right: 20px;
-        width: 360px;
+  a {
+    color: var(--accent);
+    font-weight: 500;
+    word-break: break-all;
 
-        .no-image {
-          width: 360px !important;
-          height: auto;
-        }
-      }
-
-      > div {
-
-        p {
-          margin-top: 20px;
-
-          &:first-child {
-            margin-top: 0;
-          }
-
-          &.skills {
-            span {
-              margin-right: 10px;
-
-              &:after {
-                display: inline;
-                content: ",";
-              }
-
-              &:last-child {
-                margin-right: 0;
-
-                &:after {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-
-        > ul {
-          margin-top: 20px;
-
-          > li {
-            margin-top: 5px;
-
-            &:before {
-              content: "-";
-              display: inline-block;
-              margin-right: 5px;
-            }
-          }
-        }
-      }
-
-      a {
-        color: #258ddb;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
   }
 }
 
+/* Stack the screenshot above the text on narrow screens. */
+@media (max-width: 860px) {
+  .front > ul > li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-5);
+    padding: var(--sp-5);
+  }
+
+  .front > ul > li > p {
+    position: static;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 520px) {
+  .front > ul > li > p {
+    max-width: none;
+  }
+}

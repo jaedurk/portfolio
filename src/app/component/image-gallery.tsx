@@ -4,7 +4,6 @@ import '/public/styles/gallery.scss';
 import {useCallback, useEffect, useRef, useState} from "react";
 import {createPortal} from "react-dom";
 import Image from "next/image";
-import type {CSSProperties} from "react";
 
 const PLACEHOLDER = '/images/no-img.jpg';
 /** Minimum horizontal travel (px) before a touch counts as a swipe. */
@@ -18,8 +17,6 @@ interface ImageGalleryProps {
     height: number;
     /** Class applied to the thumbnail image. */
     imageClassName?: string;
-    /** Inline style applied to the thumbnail image. */
-    imageStyle?: CSSProperties;
 }
 
 export default function ImageGallery({
@@ -28,7 +25,6 @@ export default function ImageGallery({
     width,
     height,
     imageClassName,
-    imageStyle,
 }: ImageGalleryProps) {
     const [openedAt, setOpenedAt] = useState<number | null>(null);
     const [mounted, setMounted] = useState(false);
@@ -98,7 +94,7 @@ export default function ImageGallery({
     // No screenshot: keep the original non-interactive placeholder.
     if (images.length === 0) {
         return <Image className={imageClassName} src={PLACEHOLDER} alt={alt}
-                      width={width} height={height} style={imageStyle}/>;
+                      width={width} height={height}/>;
     }
 
     return (
@@ -107,7 +103,7 @@ export default function ImageGallery({
                     onClick={() => setOpenedAt(0)}
                     aria-label={`${alt} 이미지 크게 보기${images.length > 1 ? ` (${images.length}장)` : ''}`}>
                 <Image className={imageClassName} src={images[0]} alt={alt}
-                       width={width} height={height} style={imageStyle}/>
+                       width={width} height={height}/>
                 {images.length > 1 && (
                     <span className="gallery-count" aria-hidden="true">{images.length}</span>
                 )}

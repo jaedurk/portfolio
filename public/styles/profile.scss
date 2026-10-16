@@ -1,42 +1,101 @@
 .profile {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+  gap: var(--sp-12);
+  align-items: start;
 
   .profile-image {
-    margin-right: 20px;
+    position: sticky;
+    top: calc(var(--sp-16) + var(--sp-6));
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
   }
 
   .profile-detail {
-    padding-left: 30px;
+    min-width: 0;
 
     > dl {
-      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: minmax(0, 130px) minmax(0, 1fr);
+      gap: var(--sp-4) var(--sp-6);
+      padding: var(--sp-5) 0;
+      border-bottom: 1px solid var(--border);
+
+      &:first-child {
+        padding-top: 0;
+      }
 
       &:last-child {
-        margin-bottom: 0;
+        border-bottom: 0;
+        padding-bottom: 0;
       }
 
+      /* Label */
       > dt {
-        font-size: 28px;
+        font-size: var(--fs-sm);
         font-weight: 700;
+        line-height: var(--lh-snug);
+        color: var(--text-faint);
+        letter-spacing: 0.01em;
       }
 
+      /* Value */
       > dd {
-        margin-top: 10px;
-        font-size: 20px;
+        font-size: var(--fs-sm);
+        line-height: var(--lh-normal);
+        color: var(--text);
+        min-width: 0;
 
-        > ul {
-           > li {
-            margin-top: 30px;
+        > ul > li {
+          position: relative;
+          margin-top: var(--sp-3);
+          padding-left: var(--sp-4);
+          color: var(--text-muted);
 
-            &:first-child {
-              margin-top: 0;
-            }
+          &:first-child {
+            margin-top: 0;
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0.62em;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: var(--border-strong);
+          }
+
+          /* Nested list: 담당업무 under each company. */
+          > ul > li {
+            margin-top: var(--sp-1);
+            font-size: var(--fs-xs);
+            color: var(--text-faint);
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .profile {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-8);
+    justify-items: start;
+
+    .profile-image {
+      position: static;
+      max-width: 180px;
+    }
+
+    .profile-detail > dl {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--sp-2);
     }
   }
 }
