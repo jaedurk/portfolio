@@ -94,7 +94,7 @@ const publishList: PublishItem[] = [
         "id": 12,
         "name": "국회도서관 학술연구자정보 공유시스템 고도화 사업",
         "detail": "기존 페이지 수정 및 추가 페이지 퍼블리싱(반응형)",
-        "url": "https://dl.nan웹.go.kr/",
+        "url": "https://dl.nanet.go.kr/",
         "images": ["/images/publish/nanet.jpg"],
         "contribution": 100
     },
@@ -150,7 +150,7 @@ const publishList: PublishItem[] = [
         "id": 19,
         "name": "서울도서관 홈페이지 이용자서비스 고도화 및 디자인 개선",
         "detail": "메인 및 서브 데코레이터 퍼블리싱\n웹접근성 인증마크 획득(반응형웹)",
-        "url": "https://library.humanrights.go.kr/",
+        "url": "https://lib.seoul.go.kr/",
         "images": ["/images/publish/seoul.jpg"],
         "contribution": 100
     },
@@ -159,7 +159,7 @@ const publishList: PublishItem[] = [
         "name": "안산대학교 도서관 통합학술정보시스템 구축",
         "detail": "메인 및 서브 데코레이터 퍼블리싱(반응형웹)",
         "url": "https://lib.ansan.ac.kr/",
-        "images": ["/images/publish/seoul.jpg"],
+        "images": [],
         "contribution": 100
     },
     {
@@ -275,14 +275,6 @@ const publishList: PublishItem[] = [
         "contribution": 100
     },
     {
-        "id": 35,
-        "name": "대구대학교 통합형 전자도서관시스템 업그레이드 및 홈페이지 리뉴얼",
-        "detail": "메인 및 서브 데코레이터 퍼블리싱",
-        "url": "https://lib.daegu.ac.kr/",
-        "images": ["/images/publish/daegu.png"],
-        "contribution": 100
-    },
-    {
         "id": 36,
         "name": "순천향대학교 통합 전자도서관시스템 구축",
         "detail": "메인 및 서브 데코레이터 퍼블리싱(반응형웹)",
@@ -375,7 +367,7 @@ const publishList: PublishItem[] = [
         "name": "고려대학교 도서관 시설 운영시스템 구축 사업",
         "detail": "상단 메뉴영역 스크립트 처리\n이용안내 하드코딩 페이지 퍼블리싱",
         "url": "https://library.korea.ac.kr/",
-        "images": [],
+        "images": ["/images/publish/korea.png"],
         "contribution": 100
     },
     {

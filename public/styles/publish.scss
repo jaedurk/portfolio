@@ -1,4 +1,28 @@
 .publish {
+  .section-head .summary {
+    max-width: 68ch;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-normal);
+  }
+
+  /* Named institutions worth scanning for. */
+  .highlight-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin-top: var(--sp-4);
+
+    > li {
+      padding: var(--sp-1) var(--sp-3);
+      border-radius: var(--radius-full);
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+  }
+
   > ul {
     display: grid;
     gap: var(--sp-6);
@@ -15,12 +39,12 @@
     background-color: var(--surface);
     box-shadow: var(--shadow-sm);
     transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-  }
 
-  > ul > li:hover {
-    border-color: var(--border-strong);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+    &:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
   }
 
   /* Screenshot */
@@ -39,21 +63,21 @@
 
   > ul > li > div {
     min-width: 0;
-  }
 
-  /* Project title */
-  > ul > li > div > p:first-child {
-    font-size: var(--fs-lg);
-    font-weight: 700;
-    line-height: var(--lh-snug);
-    letter-spacing: -0.025em;
-    color: var(--text);
-  }
+    > p {
+      margin-top: var(--sp-3);
+      font-size: var(--fs-sm);
+      color: var(--text-muted);
+    }
 
-  > ul > li > div > p {
-    margin-top: var(--sp-3);
-    font-size: var(--fs-sm);
-    color: var(--text-muted);
+    > p.project-name {
+      margin-top: 0;
+      font-size: var(--fs-lg);
+      font-weight: 700;
+      line-height: var(--lh-snug);
+      letter-spacing: -0.025em;
+      color: var(--text);
+    }
   }
 
   a {

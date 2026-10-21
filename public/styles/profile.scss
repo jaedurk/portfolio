@@ -1,12 +1,16 @@
 .profile {
-  display: grid;
-  grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
-  gap: var(--sp-12);
-  align-items: start;
+  /* ---- Intro: photo + summary ------------------------------------------ */
+  .profile-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+    gap: var(--sp-10);
+    align-items: start;
+    padding-bottom: var(--sp-10);
+    margin-bottom: var(--sp-10);
+    border-bottom: 1px solid var(--border);
+  }
 
   .profile-image {
-    position: sticky;
-    top: calc(var(--sp-16) + var(--sp-6));
     width: 100%;
     height: auto;
     border: 1px solid var(--border);
@@ -14,6 +18,70 @@
     box-shadow: var(--shadow-md);
   }
 
+  .profile-summary {
+    min-width: 0;
+
+    > h2 {
+      font-size: var(--fs-2xl);
+      letter-spacing: -0.035em;
+
+      > span {
+        display: block;
+        margin-top: var(--sp-2);
+        font-size: var(--fs-sm);
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+    }
+
+    .lead {
+      margin-top: var(--sp-5);
+      font-size: var(--fs-md);
+      line-height: var(--lh-normal);
+      color: var(--text-muted);
+
+      strong {
+        font-weight: 700;
+        color: var(--text);
+      }
+    }
+  }
+
+  /* Three quick numbers a recruiter can read in a second. */
+  .profile-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin-top: var(--sp-8);
+
+    > li {
+      flex: 1 1 140px;
+      padding: var(--sp-4) var(--sp-5);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background-color: var(--surface-2);
+
+      > strong {
+        display: block;
+        font-size: var(--fs-xl);
+        font-weight: 700;
+        line-height: var(--lh-tight);
+        letter-spacing: -0.03em;
+        color: var(--accent);
+      }
+
+      > span {
+        display: block;
+        margin-top: var(--sp-1);
+        font-size: var(--fs-xs);
+        color: var(--text-faint);
+      }
+    }
+  }
+
+  /* ---- Detail rows ------------------------------------------------------ */
   .profile-detail {
     min-width: 0;
 
@@ -21,7 +89,7 @@
       display: grid;
       grid-template-columns: minmax(0, 130px) minmax(0, 1fr);
       gap: var(--sp-4) var(--sp-6);
-      padding: var(--sp-5) 0;
+      padding: var(--sp-6) 0;
       border-bottom: 1px solid var(--border);
 
       &:first-child {
@@ -33,7 +101,6 @@
         padding-bottom: 0;
       }
 
-      /* Label */
       > dt {
         font-size: var(--fs-sm);
         font-weight: 700;
@@ -42,41 +109,112 @@
         letter-spacing: 0.01em;
       }
 
-      /* Value */
       > dd {
+        min-width: 0;
         font-size: var(--fs-sm);
         line-height: var(--lh-normal);
         color: var(--text);
-        min-width: 0;
 
-        > ul > li {
-          position: relative;
-          margin-top: var(--sp-3);
-          padding-left: var(--sp-4);
-          color: var(--text-muted);
+        a {
+          color: var(--accent);
+          font-weight: 500;
 
-          &:first-child {
-            margin-top: 0;
-          }
-
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0.62em;
-            left: 0;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background-color: var(--border-strong);
-          }
-
-          /* Nested list: 담당업무 under each company. */
-          > ul > li {
-            margin-top: var(--sp-1);
-            font-size: var(--fs-xs);
-            color: var(--text-faint);
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
           }
         }
+      }
+    }
+  }
+
+  /* ---- Skills ----------------------------------------------------------- */
+  .skill-group {
+    margin-top: var(--sp-5);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    > h3 {
+      font-size: var(--fs-xs);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-faint);
+      margin-bottom: var(--sp-3);
+    }
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+
+    > li {
+      padding: var(--sp-1) var(--sp-3);
+      border-radius: var(--radius-full);
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    /* Secondary groups stay neutral so the primary stack reads first. */
+    &.sub > li {
+      background-color: var(--surface-2);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+  }
+
+  /* ---- Career / Education ----------------------------------------------- */
+  .history > li {
+    position: relative;
+    margin-top: var(--sp-5);
+    padding-left: var(--sp-5);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0.55em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent);
+    }
+
+    /* Vertical connector between entries. */
+    &:not(:last-child):after {
+      content: "";
+      position: absolute;
+      top: calc(0.55em + 12px);
+      left: 2px;
+      bottom: calc(var(--sp-5) * -1);
+      width: 1px;
+      background-color: var(--border);
+    }
+
+    > p {
+      color: var(--text-muted);
+    }
+
+    .history-head {
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: var(--sp-1);
+
+      > span {
+        margin-left: var(--sp-2);
+        font-size: var(--fs-xs);
+        font-weight: 500;
+        color: var(--text-faint);
+        white-space: nowrap;
       }
     }
   }
@@ -84,18 +222,24 @@
 
 @media (max-width: 760px) {
   .profile {
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--sp-8);
-    justify-items: start;
+    .profile-intro {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--sp-6);
+      justify-items: start;
+    }
 
     .profile-image {
-      position: static;
-      max-width: 180px;
+      max-width: 160px;
     }
 
     .profile-detail > dl {
       grid-template-columns: minmax(0, 1fr);
-      gap: var(--sp-2);
+      gap: var(--sp-3);
+    }
+
+    .history-head > span {
+      display: block;
+      margin-left: 0;
     }
   }
 }

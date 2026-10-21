@@ -9,6 +9,8 @@ export interface DevelopItem {
     /** 기여도, 0 ~ 100 */
     contribution: number;
     url?: string;
+    /** 대표 프로젝트로 목록 상단에 따로 노출. */
+    featured?: boolean;
 }
 
 export interface PublishItem {

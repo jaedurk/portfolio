@@ -319,6 +319,35 @@ header nav li.on a {
     background-color: var(--accent);
 }
 
+/* ==========================================================================
+   Section heading, shared by /develop and /publish
+   ========================================================================== */
+.section-block + .section-block {
+    margin-top: var(--sp-16);
+}
+
+.section-head {
+    margin-bottom: var(--sp-6);
+    padding-bottom: var(--sp-4);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-head h2 {
+    font-size: var(--fs-xl);
+    letter-spacing: -0.03em;
+}
+
+.section-head p {
+    margin-top: var(--sp-2);
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+}
+
+.section-head p strong {
+    font-weight: 700;
+    color: var(--text);
+}
+
 footer {
     flex-shrink: 0;
     margin-top: var(--sp-16);

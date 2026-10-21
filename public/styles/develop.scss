@@ -1,10 +1,10 @@
 .front {
-  > ul {
+  ul {
     display: grid;
     gap: var(--sp-6);
   }
 
-  > ul > li {
+  .section-block > ul > li {
     display: grid;
     /* Screenshot column is fixed-ish, text takes the rest. minmax(0,…) stops
        long unbroken strings from blowing the grid out. */
@@ -17,21 +17,21 @@
     background-color: var(--surface);
     box-shadow: var(--shadow-sm);
     transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-  }
 
-  > ul > li:hover {
-    border-color: var(--border-strong);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+    &:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
   }
 
   /* Screenshot */
-  > ul > li > p {
+  .section-block > ul > li > p {
     position: sticky;
     top: calc(var(--sp-16) + var(--sp-6));
   }
 
-  > ul > li > p img {
+  .section-block > ul > li > p img {
     width: 100%;
     height: auto;
     /* Tall mobile captures get cropped to a preview height so every card
@@ -45,27 +45,27 @@
   }
 
   /* Text column */
-  > ul > li > div {
+  .section-block > ul > li > div {
     min-width: 0;
-  }
 
-  /* Project title */
-  > ul > li > div > p:first-child {
-    font-size: var(--fs-lg);
-    font-weight: 700;
-    line-height: var(--lh-snug);
-    letter-spacing: -0.025em;
-    color: var(--text);
-  }
+    > p {
+      margin-top: var(--sp-4);
+      font-size: var(--fs-sm);
+      color: var(--text-muted);
+    }
 
-  > ul > li > div > p {
-    margin-top: var(--sp-4);
-    font-size: var(--fs-sm);
-    color: var(--text-muted);
+    > p.project-name {
+      margin-top: 0;
+      font-size: var(--fs-lg);
+      font-weight: 700;
+      line-height: var(--lh-snug);
+      letter-spacing: -0.025em;
+      color: var(--text);
+    }
   }
 
   /* Skills as chips rather than a comma-separated run of text. */
-  > ul > li > div > p.skills {
+  .section-block > ul > li > div > p.skills {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -84,7 +84,8 @@
   }
 
   /* Detail list */
-  > ul > li > div > ul {
+  .section-block > ul > li > div > ul {
+    display: block;
     margin-top: var(--sp-5);
     padding-top: var(--sp-5);
     border-top: 1px solid var(--border);
@@ -125,22 +126,28 @@
   }
 }
 
+/* Featured cards get an accent edge so they read as the headline work. */
+.front .section-block:first-child > ul > li {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  box-shadow: var(--shadow-md);
+}
+
 /* Stack the screenshot above the text on narrow screens. */
 @media (max-width: 860px) {
-  .front > ul > li {
+  .front .section-block > ul > li {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--sp-5);
     padding: var(--sp-5);
   }
 
-  .front > ul > li > p {
+  .front .section-block > ul > li > p {
     position: static;
     max-width: 320px;
   }
 }
 
 @media (max-width: 520px) {
-  .front > ul > li > p {
+  .front .section-block > ul > li > p {
     max-width: none;
   }
 }

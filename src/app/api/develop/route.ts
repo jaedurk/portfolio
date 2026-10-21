@@ -1,7 +1,7 @@
 import {NextResponse} from "next/server";
 import type {DevelopItem} from "@/types/portfolio";
 
-const devlopList: DevelopItem[] = [
+const developList: DevelopItem[] = [
     {
         "id": 1,
         "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 장바구니 개편",
@@ -18,6 +18,7 @@ const devlopList: DevelopItem[] = [
     },
     {
         "id": 2,
+        "featured": true,
         "name": "3종앱(공구마켓, 심쿵할인, 할인중독) 라이브커머스",
         "period": "2021.08 ~ 2021.10",
         "skills": [
@@ -69,7 +70,7 @@ const devlopList: DevelopItem[] = [
         "detail": [
             "실시간 입찰현황 노출",
             "경매 상품 노출 처리",
-            "낙찰 시 레어어 팝업 노출 이벤트 처리"
+            "낙찰 시 레이어 팝업 노출 이벤트 처리"
         ],
         "images": ["/images/develop/image4.png"],
         "contribution": 100
@@ -262,6 +263,7 @@ const devlopList: DevelopItem[] = [
     },
     {
         "id": 15,
+        "featured": true,
         "name": "인천스타트업파크 노인복지회관 화재감지시스템",
         "period": "2024.11 ~ 2024.11",
         "skills": [
@@ -284,6 +286,7 @@ const devlopList: DevelopItem[] = [
     },
     {
         "id": 16,
+        "featured": true,
         "name": "대동도어 기업 웹사이트 구축(반응형웹)",
         "period": "2024.12 ~ 2024.12",
         "skills": [
@@ -391,7 +394,7 @@ const devlopList: DevelopItem[] = [
     {
         "id": 21,
         "name": "대풍코리아",
-        "period": "2025.04 ~ 2024.05",
+        "period": "2025.04 ~ 2025.05",
         "skills": [
             "Next.js 14",
             "HTML5",
@@ -471,8 +474,9 @@ const devlopList: DevelopItem[] = [
     },
     {
         "id": 25,
+        "featured": true,
         "name": "DN Solution 3D 작업지시서 등록 및 관리 시스템",
-        "period": "2026.02 ~ 2025.05",
+        "period": "2026.02 ~ 2026.05",
         "skills": [
             "Next.js 14",
             "HTML5",
@@ -516,5 +520,5 @@ const devlopList: DevelopItem[] = [
 ]
 
 export async function GET() {
-    return NextResponse.json(devlopList);
+    return NextResponse.json(developList);
 }
