@@ -270,8 +270,8 @@ header {
 }
 
 header h1 {
-    font-size: var(--fs-lg);
-    letter-spacing: -0.03em;
+    font-size: var(--fs-xl);
+    letter-spacing: -0.035em;
     flex-shrink: 0;
 }
 
@@ -381,7 +381,7 @@ footer .made {
     }
 
     header h1 {
-        font-size: var(--fs-md);
+        font-size: var(--fs-lg);
     }
 
     header nav ul {
